@@ -6,11 +6,11 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class FlightWritable implements Writable{
-    private float arr_delay;
-    private int dest_airport_id;
-    private float air_time;
-    private float cancelled;
-    
+    private float arr_delay;//разница в минутах между расчетные времененем приземления и реальным (мб отрицательной)
+    private int dest_airport_id; //город аэропорта
+    private float air_time;  //время прибытия ( в локальном времени (hhmm)
+    private float cancelled; //признак отмены
+
 
     public void readFields (DataInput in) throws IOException {
 
