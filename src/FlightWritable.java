@@ -6,7 +6,8 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class FlightWritable implements Writable{
-    public 
+    private float arr_delay;
+    private 
 
     public void readFields (DataInput in) throws IOException {
 
