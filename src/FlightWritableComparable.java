@@ -4,6 +4,6 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class FlightWritableComparable {
+public class FlightWritableComparable implements WritableComparable{
     
 }
