@@ -13,10 +13,15 @@ public class FlightWritable implements Writable{
 
 
     public void readFields (DataInput in) throws IOException {
+        arr_delay = in.readFloat();
+        dest_airport_id = in.readInt();
+        air_time = in.readFloat();
+        cancelled = in.readInt();
 
     }
 
     public void write (DataOutput out) throws  IOException {
+
 
     }
 }
