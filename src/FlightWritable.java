@@ -1,3 +1,5 @@
+package lab2_hdp;
+
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Writable;
 
