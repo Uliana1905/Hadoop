@@ -6,5 +6,13 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class FlightWritable implements Writable{
-    
+    public 
+
+    public void readFields (DataInput in) throws IOException {
+
+    }
+
+    public void write (DataOutput out) throws  IOException {
+
+    }
 }
