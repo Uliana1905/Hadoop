@@ -11,7 +11,9 @@ import java.io.IOException;
 
 public class FlightMap  extends Mapper <>{
     @Override
-    
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        
+    }
 
 
 }
