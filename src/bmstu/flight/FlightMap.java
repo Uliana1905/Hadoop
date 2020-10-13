@@ -22,7 +22,7 @@ public class FlightMap  extends Mapper <LongWritable, Text, IntWritable, Text>{
             }
 
         }else{
-            
+            context.write(new Text(str[1]), new IntWritable(Integer.parseInt(str[0])));
         }
 
     }
