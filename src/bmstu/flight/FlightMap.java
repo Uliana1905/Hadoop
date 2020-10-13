@@ -11,8 +11,10 @@ import java.io.IOException;
 
 public class FlightMap  extends Mapper <FlightWritable,Text, FlightWritableComparable, Text>{
     @Override
-    protected void map( key, Text value, Context context) throws IOException, InterruptedException {
+    protected void map(FlightWritable key, Text value, Context context) throws IOException, InterruptedException {
         String [] str = value.toString().split(",");
+
+        
 
     }
 
