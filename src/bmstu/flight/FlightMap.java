@@ -9,14 +9,14 @@ import java.io.IOException;
 
 
 
-public class FlightMap  extends Mapper <FlightWritable,Text, FlightWritableComparable, Text>{
+public class FlightMap  extends Mapper <LongWritable,Text, FlightWritableComparable, Text>{
     @Override
     protected void map(FlightWritable key, Text value, Context context) throws IOException, InterruptedException {
         String [] str = value.toString().split(",");
 
         if (str[21].equals ("")){
             if ( Float.parseFloat(str[20])!= (float)0){
-                context.write  ( )
+                context.write  (new Text ())
             }
         }
 
