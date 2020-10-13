@@ -9,7 +9,8 @@ import java.io.IOException;
 
 
 
-public class FlightMap  extends Mapper <{
+public class FlightMap  extends Mapper <>{
+    
 
 
 }
