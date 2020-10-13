@@ -9,9 +9,9 @@ import java.io.IOException;
 
 
 
-public class FlightMap  extends Mapper <LongWritable,Text, FlightWritableComparable, Text>{
+public class FlightMap  extends Mapper <LongWritable, Text, IntWritable, Text>{
     @Override
-    protected void map(FlightWritable key, Text value, Context context) throws IOException, InterruptedException {
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String [] str = value.toString().split(",");
 
         if (str[21].equals ("")){
