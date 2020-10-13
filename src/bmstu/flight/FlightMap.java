@@ -12,7 +12,8 @@ import java.io.IOException;
 public class FlightMap  extends Mapper <>{
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        String str = value.toString();
+        String str = value.toString().split(",");
+        
     }
 
 
