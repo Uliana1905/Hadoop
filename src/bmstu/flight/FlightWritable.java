@@ -1,4 +1,4 @@
-package lab2_hdp;
+package bmstu.flight;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Writable;
