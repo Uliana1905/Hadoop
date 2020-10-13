@@ -16,7 +16,7 @@ public class FlightMap  extends Mapper <LongWritable, Text, IntWritable, Text>{
 
         if (str[21].equals ("")){
             if ( Float.parseFloat(str[20])!= (float)0){
-                context.write  (new Text ())
+                context.write  (new Text (str[20]), new )
             }
         }
 
