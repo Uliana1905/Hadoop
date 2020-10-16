@@ -42,7 +42,14 @@ public class FlightWritableComparable implements WritableComparable {
         if (this.dest_air_ip < that_dest_air_ip){
             return -1;
         }
-        
+
+        if (this.flag > that_flag){
+            return 1;
+        }
+        if (this.flag < that_flag){
+            return -1;
+        }
+        return 0;
     }
 
     public int hashCode() {
