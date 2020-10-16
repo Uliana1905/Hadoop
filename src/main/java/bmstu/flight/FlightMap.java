@@ -15,7 +15,9 @@ public class FlightMap  extends Mapper <LongWritable, Text, WritableComparable, 
         String [] str = value.toString().split(",");
 
         if (Float.parseFloat(str[19]) != (float) 0){
-            if ( )
+            if (Float.parseFloat(str[19]) != (float) 0){
+                
+            }
         }
 
 
