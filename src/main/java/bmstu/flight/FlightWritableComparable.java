@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public class FlightWritableComparable implements WritableComparable {
     // Some data
-    private int counter;
-    private long timestamp;
+    private int flag;
+    private long dect_air_ip;
 
     public void write(DataOutput out) throws IOException {
         out.writeInt(counter);
