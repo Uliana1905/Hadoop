@@ -14,7 +14,9 @@ public class FlightMap  extends Mapper <LongWritable, Text, WritableComparable, 
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String [] str = value.toString().split(",");
 
-        if (Float.parseFloat(str[20]) != (float) 0)
+        if (Float.parseFloat(str[19]) != (float) 0){
+            if ( )
+        }
 
 
 
