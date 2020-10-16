@@ -14,7 +14,9 @@ public class AirportMap  extends Mapper <LongWritable, Text, FlightWritableCompa
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String[] str = value.toString().replaceAll("\"", "").replaceFirst(",", "?").split("\\?");
 
-        if (str[0].)
+        if (!str[0].equals("Code")) {
+            
+        }
 
 
 
