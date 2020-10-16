@@ -8,19 +8,20 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class FlightWritableComparable implements WritableComparable {
-    // Some data
     private int flag;
-    private long dect_air_ip;
+    private long dest_air_ip;
 
     public void write(DataOutput out) throws IOException {
-        out.writeInt(counter);
-        out.writeLong(timestamp);
+        out.writeInt(flag);
+        out.writeLong(dest_air_ip);
     }
 
     public void readFields(DataInput in) throws IOException {
-        counter = in.readInt();
-        timestamp = in.readLong();
+        flag = in.readInt();
+        dest_air_ip = in.readLong();
     }
+
+    public void set_flag
 
     public int compareTo(FlightWritableComparable o) {
         int thisValue = this.value;
