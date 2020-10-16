@@ -19,7 +19,9 @@ public class FlightMap  extends Mapper <LongWritable, Text, WritableComparable, 
                 WritableComparable flight = new WritableComparable();
 
                 flight.set_flag(1);
-                flight.set_des
+                flight.set_des_air(Integer.parseInt(str[14]));
+
+
             }
         }
 
