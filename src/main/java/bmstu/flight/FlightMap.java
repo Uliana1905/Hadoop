@@ -16,9 +16,10 @@ public class FlightMap  extends Mapper <LongWritable, Text, WritableComparable, 
 
         if (Float.parseFloat(str[19]) != (float) 0){
             if (Float.parseFloat(str[19]) != (float) 0){
-                WritableComparable obj = new WritableComparable();
+                WritableComparable flight = new WritableComparable();
 
-                
+                flight.set_flag(1);
+                flight.set_
             }
         }
 
