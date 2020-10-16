@@ -9,19 +9,19 @@ import java.io.IOException;
 
 
 
-public class FlightMap  extends Mapper <LongWritable, Text, WritableComparable, Text>{
+public class FlightMap  extends Mapper <LongWritable, Text, FlightWritableComparable, Text>{
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String [] str = value.toString().split(",");
 
         if (Float.parseFloat(str[19]) != (float) 0){
             if (Float.parseFloat(str[19]) != (float) 0){
-                WritableComparable flight = new WritableComparable();
+                FlightWritableComparable flight = new FlightWritableComparable();
 
                 flight.set_flag(1);
                 flight.set_des_air(Integer.parseInt(str[14]));
 
-
+                context.write (flight)
             }
         }
 
