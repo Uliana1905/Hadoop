@@ -9,10 +9,17 @@ import java.io.IOException;
 
 
 
-public class FlightMap  extends Mapper <LongWritable, Text, IntWritable, Text>{
+public class FlightMap  extends Mapper <LongWritable, Text, WritableComparable, Text>{
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String [] str = value.toString().split(",");
+
+        if str
+
+
+
+
+
 
         if (str.length > 2) {
             if (str[21].equals("")) {
