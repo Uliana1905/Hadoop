@@ -14,7 +14,7 @@ public class FlightMap  extends Mapper <LongWritable, Text, FlightWritableCompar
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String[] str = value.toString().split(",");
 
-        if (Float.parseFloat(str[19]) != (float) 1) && str[0].equals("") {
+        if (Float.parseFloat(str[19]) != (float) 1) && (!str[0].equals("YEAR")) {
             if (Float.parseFloat(str[18]) != (float) 0) {
                 FlightWritableComparable flight = new FlightWritableComparable();
 
