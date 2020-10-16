@@ -18,7 +18,7 @@ public class FlightWritableComparable implements WritableComparable {
 
     public void readFields(DataInput in) throws IOException {
         flag = in.readInt();
-        dest_air_ip = in.readLong();
+        dest_air_ip = in.readInt();
     }
 
     public void set_flag ( int flag){
@@ -29,7 +29,6 @@ public class FlightWritableComparable implements WritableComparable {
         this.dest_air_ip = dest_air_ip;
     }
 
-    public void
 
     public int compareTo(FlightWritableComparable o) {
         FlightWritableComparable that = (FlightWritableComparable) o;
@@ -40,6 +39,10 @@ public class FlightWritableComparable implements WritableComparable {
         if (this.dest_air_ip > that_dest_air_ip){
             return 1;
         }
+        if (this.dest_air_ip < that_dest_air_ip){
+            return -1;
+        }
+        
     }
 
     public int hashCode() {
