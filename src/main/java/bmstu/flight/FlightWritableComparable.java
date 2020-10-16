@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class FlightWritableComparable implements WritableComparable {
     private int flag;
-    private long dest_air_ip;
+    private int dest_air_ip;
 
     public void write(DataOutput out) throws IOException {
         out.writeInt(flag);
@@ -32,9 +32,14 @@ public class FlightWritableComparable implements WritableComparable {
     public void
 
     public int compareTo(FlightWritableComparable o) {
-        int thisValue = this.value;
-        int thatValue = o.value;
-        return (thisValue < thatValue ? -1 : (thisValue==thatValue ? 0 : 1));
+        FlightWritableComparable that = (FlightWritableComparable) o;
+
+        int that_flag = that.flag;
+        int that_dest_air_ip = that.dest_air_ip;
+
+        if (this.dest_air_ip > that_dest_air_ip){
+            return 1;
+        }
     }
 
     public int hashCode() {
