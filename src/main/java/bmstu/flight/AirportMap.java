@@ -19,6 +19,8 @@ public class AirportMap  extends Mapper <LongWritable, Text, FlightWritableCompa
 
             flight.set_flag(0);
             flight.set_des_air(Integer.parseInt(str[0]));
+            System.out.println(str[0]);
+            System.out.println(str[1]);
 
             Text name = new Text(str[1]);
 
