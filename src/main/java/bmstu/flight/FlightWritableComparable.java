@@ -29,7 +29,9 @@ public class FlightWritableComparable implements WritableComparable {
         this.dest_air_id = dest_air_ip;
     }
 
-    public void
+    public void get_des_air (){
+        return this.dest_air_id;
+    }
 
 
     public int compareTo(FlightWritableComparable o) {

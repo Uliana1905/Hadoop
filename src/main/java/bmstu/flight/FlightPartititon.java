@@ -1,7 +1,9 @@
+import bmstu.flight.FlightWritableComparable;
 import org.apache.hadoop.mapreduce.Partitioner;
+import org.apache.hadoop.io.Text
 
-public class HashPartitioner<K, V> extends Partitioner<K, V> {
-    public int getPartition(K key, V value, int numReduceTasks) {
+public class FlightPartitioner<K, V> extends Partitioner<K, V> {
+    public int getPartition(FlightWritableComparable key, Text value, int numReduceTasks) {
         return (key.hashCode() & Integer.MAX_VALUE) % numReduceTasks;
     }
 }
