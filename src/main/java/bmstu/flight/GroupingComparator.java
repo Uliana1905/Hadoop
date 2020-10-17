@@ -2,7 +2,7 @@ package bmstu.flight;
 
 import org.apache.hadoop.io.WritableComparator;
 
-public class GroupingComparator implements WritableComparator {
+public class GroupingComparator extends WritableComparator {
 
     public GroupingComparator () {
         super (FlightWritableComparable.class, true);
@@ -12,7 +12,7 @@ public class GroupingComparator implements WritableComparator {
         FlightWritableComparable a1 = (FlightWritableComparable) a;
         FlightWritableComparable b1 = (FlightWritableComparable) b;
 
-        return a1.getDes_air().compareTo(b1.getDes_air());
+        return a1.compareTo(b1);
     }
 }
 

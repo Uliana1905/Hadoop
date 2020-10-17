@@ -64,4 +64,9 @@ public class FlightWritableComparable implements WritableComparable{
         result = prime * result + (int) (timestamp ^ (timestamp >>> 32));
         return result
     }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }
