@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b352e860-9bde-470b-a548-415186b89af6" name="Default Changelist" comment="" />
+    <list default="true" id="b352e860-9bde-470b-a548-415186b89af6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,18 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/AirportMap.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,6 +87,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -118,13 +120,13 @@
         <option value="$PROJECT_DIR$/src/bmstu/flight/FlightMap.java" />
         <option value="$PROJECT_DIR$/src/bmstu/flight/FlightReduce.java" />
         <option value="$PROJECT_DIR$/src/bmstu/flight/FlightCountApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/AirportMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartititon.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightWritableComparable.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightReduce.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java" />
       </list>
     </option>
   </component>
@@ -318,16 +320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/AirportMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightJob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -342,10 +334,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/AirportMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="240">
+          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
