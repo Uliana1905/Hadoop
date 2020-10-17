@@ -9,7 +9,7 @@ public class FlightJob {
             System.err.println("Usage: FlightJob <input path> <output path>");
             System.exit(-1);
         }
-        JobConf conf = new JobConf(JoinJob.class);
+        Job conf = new JobConf(JoinJob.class);
         conf.setJobName("map join");
         conf.setInputFormat(CompositeInputFormat.class);
         FileOutputFormat.setOutputPath(conf, new Path(args[2]));
