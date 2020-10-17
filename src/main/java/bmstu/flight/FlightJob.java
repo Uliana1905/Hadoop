@@ -1,5 +1,7 @@
 package bmstu.flight;
 
+import org.apache.hadoop.mapred.JobConf;
+
 public class FlightJob {
     public static void main(String[] args) throws Exception {
 
