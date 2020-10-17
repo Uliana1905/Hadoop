@@ -56,14 +56,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
-                <element signature="e#138#139#0" expanded="true" />
-                <element signature="e#175#176#0" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-                <element signature="e#414#443#0" expanded="true" />
+                <element signature="e#220#221#0" expanded="true" />
+                <element signature="e#280#281#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -297,14 +294,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="e#138#139#0" expanded="true" />
-            <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#414#443#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
           </folding>
         </state>
       </provider>
