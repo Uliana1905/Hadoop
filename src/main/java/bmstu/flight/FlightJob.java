@@ -2,8 +2,11 @@ package bmstu.flight;
 
 public class FlightJob {
     public static void main(String[] args) throws Exception {
-        
 
+        if (args.length != 2) {
+            System.err.println("Usage: FlightJob <input path> <output path>");
+            System.exit(-1);
+        }
         JobConf conf = new JobConf(JoinJob.class);
         conf.setJobName("map join");
         conf.setInputFormat(CompositeInputFormat.class);
