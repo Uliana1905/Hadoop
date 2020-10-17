@@ -16,7 +16,7 @@ public class FlightJob {
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(FlightPartition.class);
         job.setGroupingComparatorClass(GroupingComparator.class);
-        job.setReducerClass(JoinReducer.class);
+        job.setReducerClass(FlightReduce.class);
         job.setMapOutputKeyClass(TextPair.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
