@@ -1,6 +1,7 @@
 package bmstu.flight;
 
 
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.FileOutputFormat;
 import org.apache.hadoop.mapred.jobcontrol.Job;
 import org.apache.hadoop.mapred.lib.MultipleInputs;
@@ -17,7 +18,7 @@ public class FlightJob {
         job.setPartitionerClass(FlightPartition.class);
         job.setGroupingComparatorClass(GroupingComparator.class);
         job.setReducerClass(FlightReduce.class);
-        job.setMapOutputKeyClass(TextPair.class);
+        job.setMapOutputKeyClass(FlightWritableComparable.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
