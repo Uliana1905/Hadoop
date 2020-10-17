@@ -8,7 +8,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 import java.util.Iterator;
 
-public class FlightReduce extends Reducer<Text, IntWritable, Text, LongWritable> {
+public class FlightReduce extends Reducer<FlightWritableComparable, Text, Text, LongWritable> {
     @Override
     protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
 
