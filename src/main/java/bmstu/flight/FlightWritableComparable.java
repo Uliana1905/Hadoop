@@ -52,6 +52,7 @@ public class FlightWritableComparable implements WritableComparable {
         return 0;
     }
 
+
     public int hashCode() {
         final int prime = 31;
         int result = 1;
