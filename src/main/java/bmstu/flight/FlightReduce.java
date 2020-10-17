@@ -12,7 +12,7 @@ public class FlightReduce extends Reducer<FlightWritableComparable, Text, Text, 
     @Override
     protected void reduce(FlightWritableComparable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Iterator <Text> iter =  values.iterator();
-        Text name = new Text(iter.next()):
+        Text name = new Text(iter.next());
         float min = -1;
         float max = Float.MAX_VALUE;
         float midl = 0;
@@ -37,25 +37,6 @@ public class FlightReduce extends Reducer<FlightWritableComparable, Text, Text, 
         context.write (new Text(Integer.toString(key.getDes_air())), new Text("Название аэропорта: "+ name + ", Минимальное значение: " + min + ", Максимальное значение: " + max + ", Cреднее значение: " + midl) );
 
 
-    }
-
-
-
-
-
-
-
-    @Override
-    protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
-
-        long count = 0;
-        Iterator iter =  values.iterator();
-        while (iter.hasNext()) {
-            iter.next();
-            count++;
-
-        }
-        context.write ( key, new LongWritable ( count));
     }
 
 }
