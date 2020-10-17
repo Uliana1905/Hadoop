@@ -19,9 +19,10 @@ public class GroupingComparator extends WritableComparator {
         }
         if (a1.getDes_air() < b1.getDes_air()){
             return -1;
-        }else{
-            return 0;
         }
+
+        return 0;
+
     }
 
 }
