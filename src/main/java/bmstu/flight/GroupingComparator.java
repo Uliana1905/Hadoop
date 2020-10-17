@@ -11,10 +11,6 @@ public class GroupingComparator extends WritableComparator {
 
     @Override
     public int compare(WritableComparable a, WritableComparable b) {
-        return super.compare(a, b);
-    }
-
-    public int compare(FlightWritableComparable a, FlightWritableComparable b) {
         FlightWritableComparable a1 = (FlightWritableComparable) a;
         FlightWritableComparable b1 = (FlightWritableComparable) b;
 
@@ -27,5 +23,6 @@ public class GroupingComparator extends WritableComparator {
             return 0;
         }
     }
+
 }
 
