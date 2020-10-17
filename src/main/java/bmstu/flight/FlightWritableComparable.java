@@ -33,7 +33,7 @@ public class FlightWritableComparable implements WritableComparable{
         return dest_air_id;
     }
 
-
+    @Override
     public int compareTo(FlightWritableComparable o) {
         FlightWritableComparable that = (FlightWritableComparable) o;
 
