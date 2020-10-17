@@ -33,17 +33,26 @@ public class FlightWritableComparable implements WritableComparable{
         return dest_air_id;
     }
 
+
+   // public int hashCode() {
+      //  final int prime = 31;
+      //  int result = 1;
+      //  result = prime * result + counter;
+      //  result = prime * result + (int) (timestamp ^ (timestamp >>> 32));
+      //  return result
+    //}
+
     @Override
-    public int compareTo(FlightWritableComparable o) {
+    public int compareTo(Object o) {
         FlightWritableComparable that = (FlightWritableComparable) o;
 
         int that_flag = that.flag;
-        int that_dest_air_ip = that.dest_air_id;
+        int that_dest_air_id = that.dest_air_id;
 
-        if (this.dest_air_id > that_dest_air_ip){
+        if (this.dest_air_id > that_dest_air_id){
             return 1;
         }
-        if (this.dest_air_id < that_dest_air_ip){
+        if (this.dest_air_id < that_dest_air_id){
             return -1;
         }
 
@@ -53,20 +62,6 @@ public class FlightWritableComparable implements WritableComparable{
         if (this.flag < that_flag){
             return -1;
         }
-        return 0;
-    }
-
-
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + counter;
-        result = prime * result + (int) (timestamp ^ (timestamp >>> 32));
-        return result
-    }
-
-    @Override
-    public int compareTo(Object o) {
         return 0;
     }
 }
