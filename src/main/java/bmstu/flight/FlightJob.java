@@ -21,6 +21,7 @@ public class FlightJob {
         conf.setMapperClass(MapJoinMapper.class);
         conf.setOutputKeyClass(Text.class);
         conf.setOutputValueClass(Text.class);
+        job.setGroupingComparatorClass(GroupingComparator.class);
         JobClient.runJob(conf);
     }
 }
