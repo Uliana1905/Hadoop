@@ -1,0 +1,7 @@
+bmstu/flight/FlightMap.class
+bmstu/flight/GroupingComparator.class
+bmstu/flight/FlightPartition.class
+bmstu/flight/FlightJob.class
+bmstu/flight/FlightWritableComparable.class
+bmstu/flight/AirportMap.class
+bmstu/flight/FlightReduce.class

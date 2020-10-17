@@ -1,0 +1,7 @@
+/home/ulyana/Hadoop/src/main/java/bmstu/flight/FlightMap.java
+/home/ulyana/Hadoop/src/main/java/bmstu/flight/FlightReduce.java
+/home/ulyana/Hadoop/src/main/java/bmstu/flight/FlightJob.java
+/home/ulyana/Hadoop/src/main/java/bmstu/flight/FlightWritableComparable.java
+/home/ulyana/Hadoop/src/main/java/bmstu/flight/GroupingComparator.java
+/home/ulyana/Hadoop/src/main/java/bmstu/flight/FlightPartition.java
+/home/ulyana/Hadoop/src/main/java/bmstu/flight/AirportMap.java
