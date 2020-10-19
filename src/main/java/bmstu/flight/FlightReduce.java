@@ -17,6 +17,7 @@ public class FlightReduce extends Reducer<FlightWritableComparable, Text, Text, 
         float max = Float.MAX_VALUE;
         float midl = 0;
         long count = 0;
+        System.out.println(key.getDes_air());
 
 
 

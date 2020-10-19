@@ -22,7 +22,6 @@ public class FlightMap  extends Mapper <LongWritable, Text, FlightWritableCompar
                 flight.set_des_air(Integer.parseInt(str[14]));
 
                 Text time = new Text(str[18]);
-                System.out.println(flight.getDes_air());
 
 
                 context.write(flight, time);
