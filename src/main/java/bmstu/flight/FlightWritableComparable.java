@@ -18,6 +18,11 @@ public class FlightWritableComparable implements WritableComparable<FlightWritab
     public FlightWritableComparable() {
     }
 
+    public FlightWritableComparable(int flag, int dest_air_id) {
+        this.flag = flag;
+        this.dest_air_id = dest_air_id;
+    }
+
     public void readFields(DataInput in) throws IOException {
         flag = in.readInt();
         dest_air_id = in.readInt();
@@ -35,6 +40,9 @@ public class FlightWritableComparable implements WritableComparable<FlightWritab
         return dest_air_id;
     }
 
+    public int getFlag() {
+        return flag;
+    }
 
     public int hashCode() {
         return this.getDes_air();
@@ -44,8 +52,8 @@ public class FlightWritableComparable implements WritableComparable<FlightWritab
     public int compareTo(FlightWritableComparable o) {
         FlightWritableComparable that =  o;
 
-        int that_flag = that.flag;
-        int that_dest_air_id = that.dest_air_id;
+        int that_flag = that.getFlag();
+        int that_dest_air_id = that.getDes_air();
 
         if (this.dest_air_id > that_dest_air_id){
             return 1;
