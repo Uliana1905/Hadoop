@@ -16,10 +16,8 @@ public class FlightMap  extends Mapper <LongWritable, Text, FlightWritableCompar
 
         if (!str[0].equals("\"YEAR\"") && !str[18].isEmpty()){
             if (Float.parseFloat(str[18]) != (float) 0) {
-                FlightWritableComparable flight = new FlightWritableComparable();
+                FlightWritableComparable flight = new FlightWritableComparable(1,Integer.parseInt(str[14]));
 
-                flight.set_flag(1);
-                flight.set_des_air(Integer.parseInt(str[14]));
 
                 Text time = new Text(str[18]);
 

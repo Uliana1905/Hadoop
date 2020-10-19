@@ -29,13 +29,6 @@ public class FlightWritableComparable implements WritableComparable<FlightWritab
         dest_air_id = in.readInt();
     }
 
-    public void set_flag ( int flag){
-        this.flag = flag;
-    }
-
-    public void  set_des_air ( int dest_air_ip){
-        this.dest_air_id = dest_air_ip;
-    }
 
     public int getDes_air (){
         return dest_air_id;
