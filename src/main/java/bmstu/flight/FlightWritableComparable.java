@@ -71,4 +71,9 @@ public class FlightWritableComparable implements WritableComparable<FlightWritab
         }
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "[" + dest_air_id + " " + flag + "]";
+    }
 }
