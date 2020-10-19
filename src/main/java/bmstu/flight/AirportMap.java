@@ -16,7 +16,7 @@ public class AirportMap  extends Mapper <LongWritable, Text, FlightWritableCompa
 
         if (!str[0].equals("Code")) {
             FlightWritableComparable flight = new FlightWritableComparable(0,Integer.parseInt(str[0]));
-            
+
             //System.out.println(str);
 
             Text name = new Text(str[1]);
