@@ -13,7 +13,7 @@ public class FlightWritableComparable implements WritableComparable<FlightWritab
 
     public void write(DataOutput out) throws IOException {
         out.writeInt(flag);
-        out.writeLong(dest_air_id);
+        out.writeInt(dest_air_id);
     }
     public FlightWritableComparable() {
     }
