@@ -15,6 +15,8 @@ public class FlightWritableComparable implements WritableComparable{
         out.writeInt(flag);
         out.writeLong(dest_air_id);
     }
+    public FlightWritableComparable() {
+    }
 
     public void readFields(DataInput in) throws IOException {
         flag = in.readInt();
