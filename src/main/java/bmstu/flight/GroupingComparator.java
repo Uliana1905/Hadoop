@@ -5,7 +5,7 @@ import org.apache.hadoop.io.WritableComparator;
 
 public class GroupingComparator extends WritableComparator {
 
-    public GroupingComparator () {
+    protected GroupingComparator () {
         super (FlightWritableComparable.class, true);
     }
 
@@ -13,6 +13,8 @@ public class GroupingComparator extends WritableComparator {
     public int compare(WritableComparable a, WritableComparable b) {
         FlightWritableComparable a1 = (FlightWritableComparable) a;
         FlightWritableComparable b1 = (FlightWritableComparable) b;
+        System.out.println(a1.getDes_air());
+
 
         if (a1.getDes_air() > b1.getDes_air()){
             return 1;
