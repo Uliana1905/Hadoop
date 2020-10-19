@@ -7,7 +7,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class FlightWritableComparable implements WritableComparable{
+public class FlightWritableComparable implements WritableComparable<FlightWritableComparable>{
     private int flag;
     private int dest_air_id;
 
@@ -41,8 +41,8 @@ public class FlightWritableComparable implements WritableComparable{
     }
 
     @Override
-    public int compareTo(Object o) {
-        FlightWritableComparable that = (FlightWritableComparable) o;
+    public int compareTo(FlightWritableComparable o) {
+        FlightWritableComparable that =  o;
 
         int that_flag = that.flag;
         int that_dest_air_id = that.dest_air_id;

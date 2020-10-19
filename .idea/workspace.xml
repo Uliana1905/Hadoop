@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b352e860-9bde-470b-a548-415186b89af6" name="Default Changelist" comment="" />
+    <list default="true" id="b352e860-9bde-470b-a548-415186b89af6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightWritableComparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightWritableComparable.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightWritableComparable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+            <state relative-caret-position="660">
+              <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#576#577#0" expanded="true" />
@@ -47,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="255">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightJob.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartition.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -145,9 +147,9 @@
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/AirportMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightReduce.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightWritableComparable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightWritableComparable.java" />
       </list>
     </option>
   </component>
@@ -305,24 +307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightWritableComparable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -343,16 +327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/AirportMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -363,10 +337,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -376,7 +350,35 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightWritableComparable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
