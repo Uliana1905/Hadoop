@@ -21,6 +21,8 @@ public class GroupingComparator extends WritableComparator {
             return -1;
         }
 
+        System.out.println(a1.getDes_air());
+
         return 0;
 
     }

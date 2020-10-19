@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b352e860-9bde-470b-a548-415186b89af6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightReduce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightReduce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="435">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,17 +74,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+            <state relative-caret-position="90">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightReduce.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+            <state relative-caret-position="285">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,12 +144,13 @@
         <option value="$PROJECT_DIR$/src/bmstu/flight/FlightReduce.java" />
         <option value="$PROJECT_DIR$/src/bmstu/flight/FlightCountApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartititon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightWritableComparable.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/AirportMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightReduce.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartition.java" />
       </list>
     </option>
   </component>
@@ -355,10 +356,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightReduce.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -367,15 +368,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightPartition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+        <state relative-caret-position="90">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/FlightReduce.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/flight/GroupingComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        <state relative-caret-position="435">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
