@@ -13,7 +13,7 @@ public class GroupingComparator extends WritableComparator {
     public int compare(WritableComparable a, WritableComparable b) {
         FlightWritableComparable a1 = (FlightWritableComparable) a;
         FlightWritableComparable b1 = (FlightWritableComparable) b;
-        System.out.println(a.toString());
+        //System.out.println(a.toString());
 
 
         if (a1.getDes_air() > b1.getDes_air()){

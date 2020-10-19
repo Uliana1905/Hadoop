@@ -21,7 +21,7 @@ public class AirportMap  extends Mapper <LongWritable, Text, FlightWritableCompa
 
             Text name = new Text(str[1]);
 
-            context.write(flight, new Text(str[0]));
+            context.write(flight, name);
         }
 
 
