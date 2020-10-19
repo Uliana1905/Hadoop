@@ -19,6 +19,7 @@ public class FlightWritableComparable implements WritableComparable<FlightWritab
     }
 
     public FlightWritableComparable(int flag, int dest_air_id) {
+        super();
         this.flag = flag;
         this.dest_air_id = dest_air_id;
     }
