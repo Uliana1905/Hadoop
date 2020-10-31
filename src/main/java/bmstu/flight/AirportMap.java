@@ -12,7 +12,7 @@ import java.io.IOException;
 public class AirportMap  extends Mapper <LongWritable, Text, FlightWritableComparable, Text>{
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        static  final String REGEX_SPLITTER = ",(?! )";
+        public static  final String REGEX_SPLITTER = ",(?! )";
         String[] str = value.toString().replaceAll("\"", "").split(REGEX_SPLITTER);
 
         if (!str[0].equals("Code")) {
