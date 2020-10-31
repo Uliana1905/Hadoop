@@ -14,11 +14,13 @@ public class AirportMap  extends Mapper <LongWritable, Text, FlightWritableCompa
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         final String REQEX_SPLITTER = ",(?! )";
         final String REQEX_REPLACE = "\"";
-        final String REQEX_REPLACEMENT = " ";
-        String[] str = value.toString().replaceAll(REQEX_REPLACE,  "").split(REQEX_SPLITTER);
+        final String REQEX_REPLACEMENT = "";
+        final String COMPARE = "Code";
+        final int FLAG_AIRPORT = 0;
+        String[] str = value.toString().replaceAll(REQEX_REPLACE,REQEX_REPLACEMENT).split(REQEX_SPLITTER);
 
-        if (!str[0].equals("Code")) {
-            FlightWritableComparable flight = new FlightWritableComparable(0,Integer.parseInt(str[0]));
+        if (!str[0].equals(COMPARE)) {
+            FlightWritableComparable flight = new FlightWritableComparable(FLAG_AIRPORT,Integer.parseInt(str[0]));
 
             //System.out.println(str);
 
