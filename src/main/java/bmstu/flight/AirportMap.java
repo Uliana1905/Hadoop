@@ -12,8 +12,10 @@ import java.io.IOException;
 public class AirportMap  extends Mapper <LongWritable, Text, FlightWritableComparable, Text>{
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        final String REGEX_SPLITTER = ",(?! )";
-        String[] str = value.toString().replaceAll("\"", "").split(REGEX_SPLITTER);
+        final String REQEX_SPLITTER = ",(?! )";
+        final String REQEX_REPLACE = "\"";
+        final String REQEX_REPLACEMENT = " ";
+        String[] str = value.toString().replaceAll(REQEX_REPLACE,  "").split(REQEX_SPLITTER);
 
         if (!str[0].equals("Code")) {
             FlightWritableComparable flight = new FlightWritableComparable(0,Integer.parseInt(str[0]));
