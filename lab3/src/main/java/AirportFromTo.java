@@ -1,4 +1,6 @@
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
 
 import java.util.Arrays;
 
@@ -13,7 +15,7 @@ public class AirportFromTo {
 
         JavaRDD<String> fileWithAirports = sc.textFile("IDandName.csv");
 
-        JavaRDD<String> airports = fileWithAirports.Map( s-> s.replace(REPLACEABLE,REPLACEMENT)).filter(s-> !s.equals(FIRSTLINE));
+        JavaRDD<String> airports = fileWithAirports.map(s-> s.replaceAll(REPLACEABLE, REPLACEMENT)).filter(s-> !s.equals(FIRSTLINE));
 
 
 
