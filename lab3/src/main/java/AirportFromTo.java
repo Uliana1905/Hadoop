@@ -20,7 +20,10 @@ public class AirportFromTo {
 
         JavaRDD<String[]> c_air = airports.map(s -> s.split(REQEX));
 
-        
+        JavaPairRDD<String, Long> wordsWithCount =
+                splitted.mapToPair(Hadoop
+                        s -> new Tuple2<>(Hadoop s, 1l)
+                );
 
 
     }
