@@ -15,5 +15,19 @@ public class FlightSerializable extends Serializable<>{
 
     }
 
-    
+    public int getOrig_air_id () {
+        return orig_air_id;
+    }
+
+    public int getDest_air_id () {
+        return dest_air_id;
+    }
+
+    public int getArr_delay_new () {
+        return arr_delay_new;
+    }
+
+    public int getConcelled () {
+        return concelled;
+    }
 }
