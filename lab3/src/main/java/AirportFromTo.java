@@ -9,7 +9,8 @@ public class AirportFromTo {
 
         JavaRDD<String> fileWithAirports = sc.textFile("IDandName.csv");
 
-        JavaRDD<String> airports = fileWithAirports.FlatMap( s-> s.replace("\"","")).filter(s-> !)
+        JavaRDD<String> airports = fileWithAirports.Map( s-> s.replace("\"","")).filter(s-> !s.equals("Code,Description"));
+        
 
 
 
