@@ -6,7 +6,7 @@ public class AirportFromTo {
         JavaSparkContext sc = new JavaSparkContext ( conf);
 
         JavaRDD<String> lines = sc.textFile("");
-        
+
 
     }
 }
