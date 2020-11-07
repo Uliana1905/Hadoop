@@ -12,7 +12,7 @@ import static java.lang.Integer.parseInt;
 public class AirportFromTo {
     private static final String FIRSTLINE = "Code,Description";
     private static final String REPLACEABLE = "\"";
-    private static final String REPLACEMENT = "";
+    private static final String REPLACEMENT_SPACE = "";
     private static final String REQEX = ",";
 
     public static void main ( String [] args){
@@ -20,14 +20,15 @@ public class AirportFromTo {
         JavaSparkContext sc = new JavaSparkContext ( conf);
 
         JavaRDD<String> fileWithAirports = sc.textFile("IDandName.csv");
-
-        JavaRDD<String> airports = fileWithAirports.map(s-> s.replaceAll(REPLACEABLE, REPLACEMENT)).filter(s-> !s.equals(FIRSTLINE));
-
+        JavaRDD<String> airports = fileWithAirports.map(s-> s.replaceAll(REPLACEABLE, REPLACEMENT_SPACE)).filter(s-> !s.equals(FIRSTLINE));
         JavaRDD<String[]> id_and_airport = airports.map(s -> s.split(REQEX));
-
         JavaPairRDD<Integer, String> pairIdName = id_and_airport.mapToPair(s -> new Tuple2<>(parseInt(s[0]), s[1]));
 
-        JavaRDD<String> fileWithFlight = sc.textFile("IDandName.csv");
+
+        JavaRDD<String> fileWithFlight = sc.textFile("IDandTime.csv");
+        
+
+
 
 
     }
