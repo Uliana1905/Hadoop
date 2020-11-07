@@ -1,6 +1,8 @@
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import scala.Tuple2;
 
 import java.util.Arrays;
 
@@ -18,12 +20,9 @@ public class AirportFromTo {
 
         JavaRDD<String> airports = fileWithAirports.map(s-> s.replaceAll(REPLACEABLE, REPLACEMENT)).filter(s-> !s.equals(FIRSTLINE));
 
-        JavaRDD<String[]> c_air = airports.map(s -> s.split(REQEX));
+        JavaRDD<String[]> id_and_airport = airports.map(s -> s.split(REQEX));
 
-        JavaPairRDD<String, Long> wordsWithCount =
-                splitted.mapToPair(Hadoop
-                        s -> new Tuple2<>(Hadoop s, 1l)
-                );
+        JavaPairRDD<String, Long> wordsWithCount = id_and_airport.mapToPair(Hadoop s -> new Tuple2<>(Hadoop s, 1l));
 
 
     }
