@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e83b6df-b355-460a-921a-e6835dc14f72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/FlightSerializable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FlightSerializable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AirportFromTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportFromTo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/AirportFromTo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="116" selection-start-line="27" selection-start-column="116" selection-end-line="27" selection-end-column="116" />
+            <state relative-caret-position="435">
+              <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,8 +79,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/AirportFromTo.java" />
         <option value="$PROJECT_DIR$/src/main/java/FlightSerializable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AirportFromTo.java" />
       </list>
     </option>
   </component>
@@ -240,8 +240,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AirportFromTo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="116" selection-start-line="27" selection-start-column="116" selection-end-line="27" selection-end-column="116" />
+        <state relative-caret-position="435">
+          <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

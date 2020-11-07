@@ -27,6 +27,8 @@ public class AirportFromTo {
 
         JavaPairRDD<Integer, String> pairIdName = id_and_airport.mapToPair(s -> new Tuple2<>(parseInt(s[0]), s[1]));
 
+        JavaRDD<String> fileWithFlight = sc.textFile("IDandName.csv");
+
 
     }
 }
