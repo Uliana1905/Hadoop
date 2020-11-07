@@ -7,6 +7,8 @@ import scala.Tuple2;
 
 import java.util.Arrays;
 
+import static java.lang.Integer.parseInt;
+
 public class AirportFromTo {
     private static final String FIRSTLINE = "Code,Description";
     private static final String REPLACEABLE = "\"";
@@ -23,7 +25,7 @@ public class AirportFromTo {
 
         JavaRDD<String[]> id_and_airport = airports.map(s -> s.split(REQEX));
 
-        JavaPairRDD<Integer, String>  = id_and_airport.mapToPair(s -> new Tuple2<>(ParseInt(s[0]), s[1]));
+        JavaPairRDD<Integer, String> pairIdName = id_and_airport.mapToPair(s -> new Tuple2<>(parseInt(s[0]), s[1]));
 
 
     }
