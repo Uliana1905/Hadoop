@@ -7,7 +7,7 @@ public class AirportFromTo {
 
         JavaRDD<String> airports = sc.textFile("IDandName.csv");
 
-        JavaRDD<String> 
+        JavaRDD<String> airports = 
 
 
     }
