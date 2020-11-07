@@ -1,4 +1,4 @@
-org.apache.spark.SparkConf
+import org.apache.spark.SparkConf;
 
 public class AirportFromTo {
     public static void main ( String [] args){
