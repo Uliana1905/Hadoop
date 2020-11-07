@@ -7,6 +7,6 @@ public class AirportFromTo {
 
         JavaRDD<String> lines = sc.textFile("");
 
-
+        
     }
 }
