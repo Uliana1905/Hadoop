@@ -12,6 +12,8 @@ public class FlightSerializable extends Serializable<>{
         this.dest_air_id = dest_air_id;
         this.arr_delay_new = arr_delay_new;
         this.concelled = concelled;
-        
+
     }
+
+    
 }
