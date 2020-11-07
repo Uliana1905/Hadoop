@@ -1,13 +1,15 @@
 import org.apache.spark.SparkConf;
 
+import java.util.Arrays;
+
 public class AirportFromTo {
     public static void main ( String [] args){
         SparkConf conf = new SparkConf().setAppName("lab5");
         JavaSparkContext sc = new JavaSparkContext ( conf);
 
-        JavaRDD<String> airports = sc.textFile("IDandName.csv");
+        JavaRDD<String> fileWithAirports = sc.textFile("IDandName.csv");
 
-        JavaRDD<String> airports = 
+        JavaRDD<String> airports = fileWithAirports.FlatMap ( s-> Arrays.stream(s.replace("\"","")))
 
 
     }
