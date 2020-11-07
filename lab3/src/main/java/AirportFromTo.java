@@ -2,6 +2,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.supercsv.cellprocessor.ParseInt;
 import scala.Tuple2;
 
 import java.util.Arrays;
@@ -22,7 +23,7 @@ public class AirportFromTo {
 
         JavaRDD<String[]> id_and_airport = airports.map(s -> s.split(REQEX));
 
-        JavaPairRDD<String, Long> wordsWithCount = id_and_airport.mapToPair(s -> new Tuple2<>(s, 1l));
+        JavaPairRDD<Integer, String>  = id_and_airport.mapToPair(s -> new Tuple2<>(ParseInt(s[0]), s[1]));
 
 
     }
