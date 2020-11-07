@@ -93,7 +93,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/spark-2.4.7-bin-hadoop2.7/yarn/spark-2.4.7-yarn-shuffle.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/spark-2.4.7-bin-hadoop2.7/examples/jars" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
