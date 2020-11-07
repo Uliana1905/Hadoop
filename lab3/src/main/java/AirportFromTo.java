@@ -8,6 +8,7 @@ public class AirportFromTo {
     private static final String FIRSTLINE = "Code,Description";
     private static final String REPLACEABLE = "\"";
     private static final String REPLACEMENT = "";
+    private static final String
 
     public static void main ( String [] args){
         SparkConf conf = new SparkConf().setAppName("lab5");
@@ -17,7 +18,7 @@ public class AirportFromTo {
 
         JavaRDD<String> airports = fileWithAirports.map(s-> s.replaceAll(REPLACEABLE, REPLACEMENT)).filter(s-> !s.equals(FIRSTLINE));
 
-        
+        JavaRDD<String> c_air = airports.map(s -> s.split(","));
 
 
 
