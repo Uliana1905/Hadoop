@@ -5,7 +5,7 @@ public class AirportFromTo {
         SparkConf conf = new SparkConf().setAppName("lab5");
         JavaSparkContext sc = new JavaSparkContext ( conf);
 
-        JavaRDD<String> lines = sc.textFile("IDandName.csv");
+        JavaRDD<String> airports = sc.textFile("IDandName.csv");
 
         
 
