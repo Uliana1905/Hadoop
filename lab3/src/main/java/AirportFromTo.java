@@ -26,7 +26,7 @@ public class AirportFromTo {
 
 
         JavaRDD<String> fileWithFlight = sc.textFile("IDandTime.csv");
-        JavaRDD<> flights = fileWithAirports.map().filter(s -> !s.con)
+        JavaRDD<> flights = fileWithAirports.map().filter(s -> !s.contains(""))
 
 
 
