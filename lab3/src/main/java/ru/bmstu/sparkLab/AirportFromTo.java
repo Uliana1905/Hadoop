@@ -31,6 +31,6 @@ public class AirportFromTo {
         JavaRDD<String> flights = fileWithFlight.map(s-> s.replaceAll(REPLACEABLE_COLON, REPLACEMENT_NULL)).filter(s -> !s.contains("YEAR"));
         JavaRDD<String[]> features_flight = flights.map(s -> s.split(REQEX));
         
-
+        
     }
 }
