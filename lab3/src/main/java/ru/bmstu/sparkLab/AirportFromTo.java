@@ -16,9 +16,9 @@ public class AirportFromTo {
     private static final String REPLACEABLE_COLON = "\"";
     private static final String REPLACEMENT_NULL = "";
     private static final String REQEX = ",";
+    private static final int NUMBER_ORIGIN_AIRPORT_ID = 10;
     private static final int NUMBER_ORIGIN_AIRPORT_ID = 11;
-    private static final int NUMBER_ORIGIN_AIRPORT_ID = 11;
-    
+
     public static void main ( String [] args){
         SparkConf conf = new SparkConf().setAppName("lab5");
         JavaSparkContext sc = new JavaSparkContext ( conf);
