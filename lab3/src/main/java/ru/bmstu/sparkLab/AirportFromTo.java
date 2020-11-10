@@ -19,7 +19,7 @@ public class AirportFromTo {
     private static final int NUMBER_ORIGIN_AIRPORT_ID = 11;
     private static final int NUMBER_DEST_AIRPORT_ID = 14;
     private static final int NUMBER_CANCELLED = 19;
-    private static final int 
+    private static final int NUMBER_ARR_DELAY = 18;
 
     public static void main ( String [] args){
         SparkConf conf = new SparkConf().setAppName("lab5");
@@ -35,7 +35,7 @@ public class AirportFromTo {
         JavaRDD<String> flights = fileWithFlight.map(s-> s.replaceAll(REPLACEABLE_COLON, REPLACEMENT_NULL)).filter(s -> !s.contains("YEAR"));
         JavaRDD<String[]> features_flight = flights.map(s -> s.split(REQEX));
 
-        JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.mapToPair(s -> new Tuple2<>(new Tuple2<>(parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable(parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),parseInt(s[NUMBER_DEST_AIRPORT_ID]), parseInt(s[1]), parseInt(s[2]))));
+        JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.mapToPair(s -> new Tuple2<>(new Tuple2<>(parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable(parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),parseInt(s[NUMBER_DEST_AIRPORT_ID]), parseInt(s[NUMBER_ARR_DELAY]), parseInt(s[NUMBER_CANCELLED]))));
 
     }
 }
