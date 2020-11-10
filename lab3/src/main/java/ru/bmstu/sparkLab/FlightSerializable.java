@@ -2,7 +2,7 @@ package ru.bmstu.sparkLab;
 
 import java.io.Serializable;
 
-public class FlightSerializable extends Serializable<> {
+public class FlightSerializable extends Serializable<Fli> {
     private int orig_air_id;
     private int dest_air_id;
     private int arr_delay_new;
