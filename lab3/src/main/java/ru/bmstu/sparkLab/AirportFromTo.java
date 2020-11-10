@@ -18,6 +18,8 @@ public class AirportFromTo {
     private static final String REQEX = ",";
     private static final int NUMBER_ORIGIN_AIRPORT_ID = 11;
     private static final int NUMBER_DEST_AIRPORT_ID = 14;
+    private static final int NUMBER_CANCELLED = 19;
+    private static final int 
 
     public static void main ( String [] args){
         SparkConf conf = new SparkConf().setAppName("lab5");
