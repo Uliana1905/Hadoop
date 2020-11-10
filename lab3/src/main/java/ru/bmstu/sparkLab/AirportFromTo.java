@@ -35,7 +35,7 @@ public class AirportFromTo {
         JavaRDD<String> flights = fileWithFlight.map(s-> s.replaceAll(REPLACEABLE_COLON, REPLACEMENT_NULL)).filter(s -> !s.contains("YEAR"));
         JavaRDD<String[]> features_flight = flights.map(s -> s.split(REQEX));
 
-        JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.mapToPair(s -> new Tuple2<>(new Tuple2<>(parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable(parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),parseInt(s[NUMBER_DEST_AIRPORT_ID]), parseInt(s[NUMBER_ARR_DELAY]), parseInt(s[NUMBER_CANCELLED]))));
+        JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.mapToPair(s -> new Tuple2<>(new Tuple2<>(parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable(parseInt(s[NUMBER_ARR_DELAY]), parseInt(s[NUMBER_CANCELLED]))));
 
     }
 }
