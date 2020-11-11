@@ -10,9 +10,9 @@ public class FlightSerializable implements Serializable{
     private int num_cancelled;
     private int num_dellay;
 
-   public FlightSerializable(int arr_delay, int concelled){
+   public FlightSerializable(int arr_delay, int cancelled){
         this.arr_delay = arr_delay;
-        this.cancelled = concelled;
+        this.cancelled = cancelled;
 
     }
     public FlightSerializable(int maxArr_delay, int num_flight, int num_cancelled, int num_dellay){
@@ -30,4 +30,6 @@ public class FlightSerializable implements Serializable{
     public int getConcelled () {
         return cancelled;
     }
+
+
 }
