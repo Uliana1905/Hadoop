@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e83b6df-b355-460a-921a-e6835dc14f72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" afterDir="false" />
-    </list>
+    <list default="true" id="2e83b6df-b355-460a-921a-e6835dc14f72" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="296" selection-start-line="42" selection-start-column="296" selection-end-line="42" selection-end-column="296" />
+            <state relative-caret-position="615">
+              <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -300,8 +298,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="296" selection-start-line="42" selection-start-column="296" selection-end-line="42" selection-end-column="296" />
+        <state relative-caret-position="615">
+          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
