@@ -4,6 +4,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.broadcast.Broadcast;
 import org.supercsv.cellprocessor.ParseInt;
 import scala.Tuple2;
 
@@ -45,7 +46,7 @@ public class AirportFromTo {
 
         Map<Tuple2<Integer,Integer>, FlightSerializable> key_resultAsMap = key_result.collectAsMap();
 
-        final Broadcast<Map<String, AirportData>> airportsBroadcasted = sc.broadcast(stringAirportDataMap);
+        final Broadcast<Map<Tuple2<Integer,Integer>, FlightSerializable>> airportsBroadcasted = sc.broadcast(stringAirportDataMap);
 
 
     }
