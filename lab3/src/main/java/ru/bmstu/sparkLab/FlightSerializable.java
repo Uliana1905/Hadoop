@@ -27,7 +27,7 @@ public class FlightSerializable implements Serializable{
         return arr_delay;
     }
 
-    public int getConcelled () {
+    public int getCancelled () {
         return cancelled;
     }
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e83b6df-b355-460a-921a-e6835dc14f72" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+            <state relative-caret-position="405">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
                 <element signature="e#361#362#0" expanded="true" />
                 <element signature="e#397#398#0" expanded="true" />
@@ -46,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
-              <caret line="40" column="43" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="43" />
+              <caret line="40" column="126" selection-start-line="40" selection-start-column="126" selection-end-line="40" selection-end-column="126" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -283,8 +284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        <state relative-caret-position="405">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
             <element signature="e#361#362#0" expanded="true" />
             <element signature="e#397#398#0" expanded="true" />
@@ -301,7 +302,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="43" />
+          <caret line="40" column="126" selection-start-line="40" selection-start-column="126" selection-end-line="40" selection-end-column="126" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
