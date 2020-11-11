@@ -39,7 +39,7 @@ public class AirportFromTo {
 
         JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> key_result = pairId_one_and_two.combineByKey(
                 v -> new FlightSerializable(v.getArr_delay_new(), 1, v.getCancelled(), (v.getArr_delay_new() > (float)0)? 1:0),
-                (FlightSerializable v, FlightSerializable element)-> new FlightSerializable((v.getArr_delay_new()< element.getArr_delay_new()) ? element.getArr_delay_new(): v.getArr_delay_new(), v.getNum_flight() + 1,(element.getNumCancelled() == (float)0)? v.getNumCancelled() :v.getNumCancelled() + 1, (element.getArr_delay_new() > 0)? v.getNum_dellay() +1: v.getNum_dellay()),
+                (v, element)-> new FlightSerializable((v.getArr_delay_new()< element.getArr_delay_new()) ? element.getArr_delay_new(): v.getArr_delay_new(), v.getNum_flight() + 1, (element.getNumCancelled() == (float)0)? v.getNumCancelled() :v.getNumCancelled() + 1, (element.getArr_delay_new() > 0)? v.getNum_dellay() +1: v.getNum_dellay()),
                 );
     }
 
