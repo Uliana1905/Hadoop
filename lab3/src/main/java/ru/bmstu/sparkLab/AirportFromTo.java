@@ -39,7 +39,7 @@ public class AirportFromTo {
 
         JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> key_result = pairId_one_and_two.combineByKey(
                 (FlightSerializable v) -> new FlightSerializable(v.getArr_delay_new(), 1 , v.getConcelled(), {if (v.getArr_delay_new() > (float)0) 1;0}),
-
+                
         )
     }
 
