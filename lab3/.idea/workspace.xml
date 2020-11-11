@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e83b6df-b355-460a-921a-e6835dc14f72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" afterDir="false" />
-    </list>
+    <list default="true" id="2e83b6df-b355-460a-921a-e6835dc14f72" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -255,12 +253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
