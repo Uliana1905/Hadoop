@@ -31,5 +31,8 @@ public class FlightSerializable implements Serializable{
         return cancelled;
     }
 
+    public int getNum_flight (){
+       return num_flight;
+    }
 
 }
