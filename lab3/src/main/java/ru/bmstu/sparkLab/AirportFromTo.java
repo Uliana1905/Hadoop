@@ -46,7 +46,7 @@ public class AirportFromTo {
 
         Map<Tuple2<Integer,Integer>, FlightSerializable> key_resultAsMap = key_result.collectAsMap();
 
-        final Broadcast<Map<Tuple2<Integer,Integer>, FlightSerializable>> airportsBroadcasted = sc.broadcast(stringAirportDataMap);
+        final Broadcast<Map<Tuple2<Integer,Integer>, FlightSerializable>> airportsBroadcasted = sc.broadcast(key_resultAsMap);
 
 
     }
