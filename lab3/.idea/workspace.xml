@@ -40,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="615">
-              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+              <caret line="41" column="46" lean-forward="true" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -291,7 +291,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
-          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <caret line="41" column="46" lean-forward="true" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
