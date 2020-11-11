@@ -38,8 +38,9 @@ public class AirportFromTo {
         JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.mapToPair(s -> new Tuple2<>(new Tuple2<>(parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable(parseInt(s[NUMBER_ARR_DELAY]), parseInt(s[NUMBER_CANCELLED]))));
 
         JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> key_result = pairId_one_and_two.combineByKey(
-                (FlightSerializable v) -> new FlightSerializable(v.getArr_delay_new(), 1, v.getConcelled(), (v.getArr_delay_new() > (float)0)? 1:0))
-                (FlightSerializable v, FlightSerializable element)  -> ((v.getArr_delay_new()< element.getArr_delay_new())? element.getArr_delay_new(): v.getArr_delay_new(), v.getNum_flight() + 1,(element.getNumCancelled))
+                (FlightSerializable v) -> new FlightSerializable(v.getArr_delay_new(), 1, v.getConcelled(), (v.getArr_delay_new() > (float)0)? 1:0),
+                (FlightSerializable v, FlightSerializable element)  -> ((v.getArr_delay_new()< element.getArr_delay_new())? element.getArr_delay_new(): v.getArr_delay_new(), v.getNum_flight() + 1,(element.getNumConcelled == (float)0)? v.getNumCancelled :v.getNumCancelled + 1, (element.getArr_delay_new() > 0)? v.getNum_dellay +1, v.getNum_dellay),
+                );
     }
 
 }

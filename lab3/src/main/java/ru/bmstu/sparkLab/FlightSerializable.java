@@ -40,4 +40,7 @@ public class FlightSerializable implements Serializable{
 
     }
 
+    public int getNum_dellay(){
+       return num_dellay;
+    }
 }
