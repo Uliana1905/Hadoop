@@ -9,6 +9,7 @@ import org.supercsv.cellprocessor.ParseInt;
 import scala.Tuple2;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import static java.lang.Integer.parseInt;
@@ -50,7 +51,8 @@ public class AirportFromTo {
 
 
         JavaRDD<String> result = key_result.map(t -> FlightSerializable.combine(t._1, t._2, airportsBroadcasted.value()));
-        result.saveAsTextFile("hdfs://");
+        List<String> output_result = result.collect();
+        result.saveAsTextFile("output");
     }
 
 
