@@ -1,6 +1,10 @@
 package ru.bmstu.sparkLab;
 
+import org.apache.spark.broadcast.Broadcast;
+import scala.Tuple2;
+
 import java.io.Serializable;
+import java.util.Map;
 
 public class FlightSerializable implements Serializable{
     private int arr_delay;
@@ -43,4 +47,7 @@ public class FlightSerializable implements Serializable{
     public int getNum_dellay(){
        return num_dellay;
     }
+
+    public static String combine (Tuple2<Integer,Integer> key, FlightSerializable value, Broadcast<Map<Integer,String>> airportsBroadcasted )
 }
+
