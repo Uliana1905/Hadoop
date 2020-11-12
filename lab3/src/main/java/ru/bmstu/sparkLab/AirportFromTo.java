@@ -49,7 +49,7 @@ public class AirportFromTo {
         final Broadcast<Map<Integer,String>> airportsBroadcasted = sc.broadcast(key_resultAsMap);
 
 
-        JavaRDD<String> result = key_result.map((k, v) -> FlightSerializable.combine(k, v, airportsBroadcasted));
+        JavaRDD<String> result = key_result.map(t -> FlightSerializable.combine(t._1, t._2, airportsBroadcasted.value()));
     }
 
 

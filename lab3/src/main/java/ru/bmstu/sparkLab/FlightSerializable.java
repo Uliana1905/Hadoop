@@ -48,6 +48,8 @@ public class FlightSerializable implements Serializable{
        return num_dellay;
     }
 
-    public static String combine (Tuple2<Integer,Integer> key, FlightSerializable value, Broadcast<Map<Integer,String>> airportsBroadcasted )
+    public static String combine (Tuple2<Integer,Integer> key, FlightSerializable value, Map<Integer,String> airportsBroadcasted ){
+
+    }
 }
 
