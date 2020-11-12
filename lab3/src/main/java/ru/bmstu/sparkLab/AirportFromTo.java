@@ -52,6 +52,9 @@ public class AirportFromTo {
 
         JavaRDD<String> result = key_result.map(t -> FlightSerializable.combine(t._1, t._2, airportsBroadcasted.value()));
         List<String> output_result = result.collect();
+        for ( i: output_result){
+            System.out.println(i);
+        }
         result.saveAsTextFile("output");
     }
 
