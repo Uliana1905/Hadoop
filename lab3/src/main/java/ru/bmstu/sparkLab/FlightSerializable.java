@@ -48,8 +48,13 @@ public class FlightSerializable implements Serializable{
        return num_dellay;
     }
 
-    public static String combine (Tuple2<Integer,Integer> key, FlightSerializable value, Map<Integer,String> airportsBroadcasted ){
+    public int getMaxArr_delay(){
+       return maxArr_delay;
+    }
 
+    public static String combine (Tuple2<Integer,Integer> key, FlightSerializable value, Map<Integer,String> airportsBroadcasted ){
+        String result = "";
+        result = airportsBroadcasted.get(key._1) + airportsBroadcasted.get(key._2) + value.getMaxArr_delay() + 
     }
 }
 
