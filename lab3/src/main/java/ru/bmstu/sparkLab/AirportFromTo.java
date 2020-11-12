@@ -44,12 +44,12 @@ public class AirportFromTo {
                 (v, element)-> new FlightSerializable((v.getArr_delay_new()< element.getArr_delay_new()) ? element.getArr_delay_new(): v.getArr_delay_new(), v.getNum_flight() + 1, (element.getNumCancelled() == (float)0)? v.getNumCancelled() :v.getNumCancelled() + 1, (element.getArr_delay_new() > 0)? v.getNum_dellay() +1: v.getNum_dellay()),
                 (com1, com2)-> new FlightSerializable((com1.getArr_delay_new()< com2.getArr_delay_new()) ? com2.getArr_delay_new(): com1.getArr_delay_new(), com1.getNum_flight() + com2.getNum_flight(), com1.getNumCancelled() + com2.getNumCancelled(),com1.getNum_dellay() + com2.getNum_dellay()));
 
-        Map<Tuple2<Integer,Integer>, FlightSerializable> key_resultAsMap = key_result.collectAsMap();
+        Map<Integer,String> key_resultAsMap = pairIdName.collectAsMap();
 
-        final Broadcast<Map<Tuple2<Integer,Integer>, FlightSerializable>> airportsBroadcasted = sc.broadcast(key_resultAsMap);
+        final Broadcast<Tuple2<Integer,String>> airportsBroadcasted = sc.broadcast(key_resultAsMap);
 
 
-
+        JavaRDD<String> result = key_result.map((k, v) -> FlightSerializable.combine(k, v, airportsBroadcasted))
     }
 
 
