@@ -46,10 +46,10 @@ public class AirportFromTo {
 
         Map<Integer,String> key_resultAsMap = pairIdName.collectAsMap();
 
-        final Broadcast<Tuple2<Integer,String>> airportsBroadcasted = sc.broadcast(key_resultAsMap);
+        final Broadcast<Map<Integer,String>> airportsBroadcasted = sc.broadcast(key_resultAsMap);
 
 
-        JavaRDD<String> result = key_result.map((k, v) -> FlightSerializable.combine(k, v, airportsBroadcasted))
+        JavaRDD<String> result = key_result.map((k, v) -> FlightSerializable.combine(k, v, airportsBroadcasted));
     }
 
 
