@@ -49,6 +49,7 @@ public class AirportFromTo {
         final Broadcast<Map<Tuple2<Integer,Integer>, FlightSerializable>> airportsBroadcasted = sc.broadcast(key_resultAsMap);
 
 
+
     }
 
 
