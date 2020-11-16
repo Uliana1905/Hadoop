@@ -26,7 +26,7 @@ public class AirportFromTo {
         JavaSparkContext sc = new JavaSparkContext (conf);
 
         JavaRDD<String> fileWithAirports = sc.textFile("/IDandName.csv");
-        JavaRDD<String> airports = fileWithAirports.map(s-> s.replaceAll(REPLACEABLE_COLON, REPLACEMENT_NULL)).filter(s-> !s.equals(FIRSTLINE));
+        JavaRDD<String> airports = fileWithAirports.filter(s-> !s.equals(FIRSTLINE)).map(s-> s.replaceAll(REPLACEABLE_COLON, REPLACEMENT_NULL));
         JavaRDD<String[]> id_and_airport = airports.map(s -> s.split(REQEX));
         JavaPairRDD<Integer, String> pairIdName = id_and_airport.mapToPair(s -> new Tuple2<>(parseInt(s[0]), s[1]));
 
