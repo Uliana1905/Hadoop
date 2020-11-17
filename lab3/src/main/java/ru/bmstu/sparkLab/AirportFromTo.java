@@ -50,7 +50,7 @@ public class AirportFromTo {
         JavaRDD<String[]> features_flight = fileWithFlight.map(s -> s.split(REQEX));
 
 
-        JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.filter(s ->!s[0].contains(FIRSTLINEofFIGHTS)).mapToPair(s -> new Tuple2<>(new Tuple2<>(Integer.parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),Integer.parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable (getArrDellaytofArray(s[NUMBER_ARR_DELAY]), Integer.parseInt(s[NUMBER_CANCELLED]))));
+        JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.filter(s ->!s[0].contains(FIRSTLINEofFIGHTS)).mapToPair(s -> new Tuple2<>(new Tuple2<>(Integer.parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),Integer.parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable (getArrDellaytofArray(s[NUMBER_ARR_DELAY]), (int)Float.parseFloat(s[NUMBER_CANCELLED]))));
 
         JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> key_result = pairId_one_and_two.combineByKey(
                 v -> new FlightSerializable(v.getArr_delay_new(), 1, v.getCancelled(), (v.getArr_delay_new() > (float)0)? 1:0),
