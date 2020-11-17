@@ -22,7 +22,9 @@ public class AirportFromTo {
     private static final int NUMBER_ARR_DELAY = 18;
     private static final String FIRSTLINEofFIGHTS = "YEAR";
 
-    private static int getArrDellaytofArray()
+    private static int getArrDellaytofArray(String str){
+        
+    }
 
     public static void main ( String [] args){
         SparkConf conf = new SparkConf().setAppName("lab5");
