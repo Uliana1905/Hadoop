@@ -63,8 +63,8 @@ public class FlightSerializable implements Serializable{
 
     public static String combine (Tuple2<Integer,Integer> key, FlightSerializable value, Map<Integer,String> airportsBroadcasted ){
         String result;
-        result = airportsBroadcasted.get(key._1) +"->"+ airportsBroadcasted.get(key._2) +"\n"+"Максимальное время"+  value.getMaxArr_delay() + " Процент опоздавших: " + calculator(value.getNum_dellay(), value.getNum_flight()) + "%" + " Процент отмененных: " + calculator(value.getNumCancelled(),value.getNum_flight()) + "%";
-        //result = airportsBroadcasted.get(key._1) +"->"+ airportsBroadcasted.get(key._2) +"\n"+"Максимальное время"+  value.getMaxArr_delay() + " Количество полетов : " +  value.getNum_flight() + " Количество отменных: " + value.getNumCancelled() + "%";
+        result = airportsBroadcasted.get(key._1) +"->"+ airportsBroadcasted.get(key._2) +"\n"+"Максимальное  "+  value.getMaxArr_delay() + " Процент опоздавших: " + calculator(value.getNum_dellay(), value.getNum_flight()) + "%" + " Процент отмененных: " + calculator(value.getNumCancelled(),value.getNum_flight()) + "%";
+
 
         return result;
    }
