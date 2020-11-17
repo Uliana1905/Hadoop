@@ -25,6 +25,7 @@ public class AirportFromTo {
     private static final float NULL_TIME = 0;
 
     private static float getArrDellaytofArray(String elem){
+        elem= elem.replaceAll(REPLACEABLE_COLON, REPLACEMENT_NULL);
         if (!elem.isEmpty()){
             System.out.println("Элемент равен " + Float.parseFloat(elem));
             return Float.parseFloat(elem);
