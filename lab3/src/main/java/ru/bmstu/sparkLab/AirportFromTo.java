@@ -22,8 +22,10 @@ public class AirportFromTo {
     private static final int NUMBER_ARR_DELAY = 18;
     private static final String FIRSTLINEofFIGHTS = "YEAR";
 
-    private static int getArrDellaytofArray(String str){
-        
+    private static int getArrDellaytofArray(String elem){
+        if (!elem.isEmpty()){
+            
+        }
     }
 
     public static void main ( String [] args){
