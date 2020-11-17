@@ -12,7 +12,7 @@ import java.util.Map;
 import static java.lang.Integer.parseInt;
 
 public class AirportFromTo {
-    private static final String REQEX_SPLITTER = ",(?! )"
+    private static final String REQEX_SPLITTER = ",(?! )";
     private static final String FIRSTLINEofAIRPORTS = "Code,Description";
     private static final String REPLACEABLE_COLON = "\"";
     private static final String REPLACEMENT_NULL = "";
@@ -26,8 +26,10 @@ public class AirportFromTo {
 
     private static float getArrDellaytofArray(String elem){
         if (!elem.isEmpty()){
+            System.out.println("Элемент равен " + Float.parseFloat(elem));
             return Float.parseFloat(elem);
         }else
+            System.out.println("Элемент равен " + NULL_TIME);
             return NULL_TIME;
     }
 
