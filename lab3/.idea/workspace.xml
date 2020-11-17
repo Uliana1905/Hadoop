@@ -21,7 +21,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="777">
@@ -60,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IDandTime.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5460">
+            <state relative-caret-position="1299">
               <caret line="364" column="102" selection-start-line="364" selection-start-column="102" selection-end-line="364" selection-end-column="102" />
             </state>
           </provider>
@@ -71,7 +71,9 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IDandName.csv">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-945" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -260,23 +262,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../lab2/src/main/java/bmstu/flight/AirportMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDandTime.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5460">
-          <caret line="364" column="102" selection-start-line="364" selection-start-column="102" selection-end-line="364" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDandName.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../lab2/src/main/java/bmstu/flight/FlightWritableComparable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -310,6 +295,25 @@
             <element signature="e#959#960#0" expanded="true" />
             <element signature="e#991#992#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../lab2/src/main/java/bmstu/flight/AirportMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDandName.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-945" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDandTime.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1299">
+          <caret line="364" column="102" selection-start-line="364" selection-start-column="102" selection-end-line="364" selection-end-column="102" />
         </state>
       </provider>
     </entry>
