@@ -12,6 +12,7 @@ import java.util.Map;
 import static java.lang.Integer.parseInt;
 
 public class AirportFromTo {
+    private static final String REQEX_SPLITTER = ",(?! )"
     private static final String FIRSTLINEofAIRPORTS = "Code,Description";
     private static final String REPLACEABLE_COLON = "\"";
     private static final String REPLACEMENT_NULL = "";
@@ -38,7 +39,7 @@ public class AirportFromTo {
 
         JavaRDD<String> fileWithAirports = sc.textFile("/IDandName.csv");
         JavaRDD<String> airports = fileWithAirports.filter(s-> !s.contains(FIRSTLINEofAIRPORTS)).map(s-> s.replaceAll(REPLACEABLE_COLON, REPLACEMENT_NULL));
-        JavaRDD<String[]> id_and_airport = airports.map(s -> s.split(REQEX));
+        JavaRDD<String[]> id_and_airport = airports.map(s -> s.split(REQEX_SPLITTER));
         JavaPairRDD<Integer, String> pairIdName = id_and_airport.mapToPair(s -> new Tuple2<>(parseInt(s[0]), s[1]));
 
 
