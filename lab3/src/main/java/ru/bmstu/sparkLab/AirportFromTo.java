@@ -21,12 +21,13 @@ public class AirportFromTo {
     private static final int NUMBER_CANCELLED = 19;
     private static final int NUMBER_ARR_DELAY = 18;
     private static final String FIRSTLINEofFIGHTS = "YEAR";
+    private static final 
 
-    private static int getArrDellaytofArray(String elem){
+    private static float getArrDellaytofArray(String elem){
         if (!elem.isEmpty()){
             return Float.parseFloat(elem);
         }else
-            return 
+            return
     }
 
     public static void main ( String [] args){
