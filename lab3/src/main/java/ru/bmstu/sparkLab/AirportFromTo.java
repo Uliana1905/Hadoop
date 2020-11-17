@@ -24,8 +24,8 @@ public class AirportFromTo {
 
     private static int getArrDellaytofArray(String elem){
         if (!elem.isEmpty()){
-            
-        }
+            return Float.parseFloat(elem);
+        }else
     }
 
     public static void main ( String [] args){
