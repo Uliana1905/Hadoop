@@ -26,6 +26,7 @@ public class AirportFromTo {
         if (!elem.isEmpty()){
             return Float.parseFloat(elem);
         }else
+            return 
     }
 
     public static void main ( String [] args){
