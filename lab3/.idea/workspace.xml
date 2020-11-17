@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e83b6df-b355-460a-921a-e6835dc14f72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="735">
-              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+              <caret line="59" column="252" lean-forward="true" selection-start-line="59" selection-start-column="252" selection-end-line="59" selection-end-column="252" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -297,7 +296,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
-          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+          <caret line="59" column="252" lean-forward="true" selection-start-line="59" selection-start-column="252" selection-end-line="59" selection-end-column="252" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
