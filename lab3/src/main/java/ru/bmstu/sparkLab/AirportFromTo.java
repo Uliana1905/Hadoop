@@ -30,6 +30,14 @@ public class AirportFromTo {
             return NULL_TIME;
     }
 
+    private static int getCancelledtofArray(String elem){
+        if (!elem.isEmpty()){
+            return Integer.parseInt(elem);
+        }else
+            return ;
+    }
+
+
     public static void main ( String [] args){
         SparkConf conf = new SparkConf().setAppName("lab5");
         JavaSparkContext sc = new JavaSparkContext (conf);
