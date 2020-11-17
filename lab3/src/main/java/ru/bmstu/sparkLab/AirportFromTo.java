@@ -54,7 +54,7 @@ public class AirportFromTo {
 
         JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> key_result = pairId_one_and_two.combineByKey(
                 v -> new FlightSerializable(v.getArr_delay_new(), 1, v.getCancelled(), (v.getArr_delay_new() > 0)? 1:0),
-                (v, element)-> new FlightSerializable((v.getMaxArr_delay()< element.getArr_delay_new()) ? element.getArr_delay_new(): v.getMaxArr_delay(), v.getNum_flight() + 1, (element.getCancelled() == 0)? v.getNumCancelled() :v.getNumCancelled() + 1, (element.getArr_delay_new() > 0)? v.getNum_dellay() +1: v.getNum_dellay()),
+                (v, element)-> new FlightSerializable((v.getMaxArr_delay()< element.getArr_delay_new()) ? element.getArr_delay_new(): v.getMaxArr_delay(), v.getNum_flight() + 1, (element.getCancelled() == 0)? v.getNumCancelled() :v.getNumCancelled() + 1, (element.getArr_delay_new() != (float)0)? v.getNum_dellay() +1: v.getNum_dellay()),
                 (com1, com2)-> new FlightSerializable((com1.getMaxArr_delay()< com2.getMaxArr_delay()) ? com2.getMaxArr_delay(): com1.getMaxArr_delay(), com1.getNum_flight() + com2.getNum_flight(), com1.getNumCancelled() + com2.getNumCancelled(),com1.getNum_dellay() + com2.getNum_dellay()));
 
         Map<Integer,String> key_resultAsMap = pairIdName.collectAsMap();
