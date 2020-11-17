@@ -35,7 +35,7 @@ public class FlightSerializable implements Serializable{
         return cancelled;
     }
 
-    private static float (float elem1, float elem2){
+    private static float calculate(float elem1, float elem2){
 
     }
 
