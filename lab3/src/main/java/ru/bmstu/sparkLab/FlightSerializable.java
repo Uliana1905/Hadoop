@@ -35,7 +35,10 @@ public class FlightSerializable implements Serializable{
         return cancelled;
     }
 
-    private static float calculate(float elem1, float elem2){
+    private static float calculator(float elem1, float elem2){
+       float result;
+       result = (elem1 / elem2) * 100;
+       return result;
 
     }
 
@@ -60,7 +63,7 @@ public class FlightSerializable implements Serializable{
 
     public static String combine (Tuple2<Integer,Integer> key, FlightSerializable value, Map<Integer,String> airportsBroadcasted ){
         String result;
-        result = airportsBroadcasted.get(key._1) +"->"+ airportsBroadcasted.get(key._2) +"\n"+"Максимальное время"+  value.getMaxArr_delay() + " Процент опоздавших: " + (float) (value.getNum_dellay() / value.getNum_flight()) + "%" + " Процент отмененных: " + (float)(value.getNumCancelled() / value.getNum_flight()) + "%";
+        result = airportsBroadcasted.get(key._1) +"->"+ airportsBroadcasted.get(key._2) +"\n"+"Максимальное время"+  value.getMaxArr_delay() + " Процент опоздавших: " + calculator(value.getNum_dellay(), value.getNum_flight()) + "%" + " Процент отмененных: " + calculator(value.getNumCancelled(),value.getNum_flight()) + "%";
         //result = airportsBroadcasted.get(key._1) +"->"+ airportsBroadcasted.get(key._2) +"\n"+"Максимальное время"+  value.getMaxArr_delay() + " Количество полетов : " +  value.getNum_flight() + " Количество отменных: " + value.getNumCancelled() + "%";
 
         return result;
