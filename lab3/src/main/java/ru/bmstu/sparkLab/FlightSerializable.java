@@ -35,7 +35,7 @@ public class FlightSerializable implements Serializable{
         return cancelled;
     }
 
-    
+
 
     public int getNum_flight (){
        return num_flight;
@@ -56,7 +56,7 @@ public class FlightSerializable implements Serializable{
 
     public static String combine (Tuple2<Integer,Integer> key, FlightSerializable value, Map<Integer,String> airportsBroadcasted ){
         String result;
-        result = airportsBroadcasted.get(key._1) + airportsBroadcasted.get(key._2) + value.getMaxArr_delay() + " Процент опоздавших: " + (value.getNum_dellay() / value.getNum_flight()) * 100 + "%" + "Процент отмененных: " + (value.getNumCancelled() / value.getNum_flight()) * 100 + "%";
+        result = airportsBroadcasted.get(key._1) +"->"+ airportsBroadcasted.get(key._2) + value.getMaxArr_delay() + " Процент опоздавших: " + (value.getNum_dellay() / value.getNum_flight()) * 100 + "%" + " Процент отмененных: " + (value.getNumCancelled() / value.getNum_flight()) * 100 + "%";
         return result;
    }
 }
