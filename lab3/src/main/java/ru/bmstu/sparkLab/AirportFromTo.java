@@ -12,7 +12,7 @@ import java.util.Map;
 import static java.lang.Integer.parseInt;
 
 public class AirportFromTo {
-    private static final String FIRSTLINE = "Code,Description";
+    private static final String FIRSTLINEofAIRPORTS = "Code,Description";
     private static final String REPLACEABLE_COLON = "\"";
     private static final String REPLACEMENT_NULL = "";
     private static final String REQEX = ",";
@@ -20,13 +20,14 @@ public class AirportFromTo {
     private static final int NUMBER_DEST_AIRPORT_ID = 14;
     private static final int NUMBER_CANCELLED = 19;
     private static final int NUMBER_ARR_DELAY = 18;
+    private static final String FIRSTLINEofFIGHTS = "YEAR";
 
     public static void main ( String [] args){
         SparkConf conf = new SparkConf().setAppName("lab5");
         JavaSparkContext sc = new JavaSparkContext (conf);
 
         JavaRDD<String> fileWithAirports = sc.textFile("/IDandName.csv");
-        JavaRDD<String> airports = fileWithAirports.filter(s-> !s.equals(FIRSTLINE)).map(s-> s.replaceAll(REPLACEABLE_COLON, REPLACEMENT_NULL));
+        JavaRDD<String> airports = fileWithAirports.filter(s-> !s.contains(FIRSTLINEofAIRPORTS)).map(s-> s.replaceAll(REPLACEABLE_COLON, REPLACEMENT_NULL));
         JavaRDD<String[]> id_and_airport = airports.map(s -> s.split(REQEX));
         JavaPairRDD<Integer, String> pairIdName = id_and_airport.mapToPair(s -> new Tuple2<>(parseInt(s[0]), s[1]));
 
@@ -34,9 +35,8 @@ public class AirportFromTo {
         JavaRDD<String> fileWithFlight = sc.textFile("/IDandTime.csv");
         JavaRDD<String[]> features_flight = fileWithFlight.map(s -> s.split(REQEX));
 
-        features_flight.saveAsTextFile("output123");
 
-        JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.filter(s ->!s[NUMBER_ARR_DELAY].isEmpty() && !s[0].contains("YEAR")).mapToPair(s -> new Tuple2<>(new Tuple2<>(Integer.parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),Integer.parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable (Integer.parseInt(s[NUMBER_ARR_DELAY]), Integer.parseInt(s[NUMBER_CANCELLED]))));
+        JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.filter(s ->!s[0].contains(FIRSTLINEofFIGHTS)).mapToPair(s -> new Tuple2<>(new Tuple2<>(Integer.parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),Integer.parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable (Integer.parseInt(s[NUMBER_ARR_DELAY]), Integer.parseInt(s[NUMBER_CANCELLED]))));
 
         JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> key_result = pairId_one_and_two.combineByKey(
                 v -> new FlightSerializable(v.getArr_delay_new(), 1, v.getCancelled(), (v.getArr_delay_new() > (float)0)? 1:0),
@@ -53,7 +53,7 @@ public class AirportFromTo {
         //for ( i: output_result){
           //  System.out.println(i);
         //}
-        //result.saveAsTextFile("output");
+        result.saveAsTextFile("output");
     }
 
 
