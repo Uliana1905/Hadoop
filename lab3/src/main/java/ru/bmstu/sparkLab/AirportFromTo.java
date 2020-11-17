@@ -34,6 +34,8 @@ public class AirportFromTo {
         JavaRDD<String> fileWithFlight = sc.textFile("/IDandTime.csv");
         JavaRDD<String[]> features_flight = fileWithFlight.map(s -> s.split(REQEX));
 
+        features_flight.saveAsTextFile("output123");
+
         JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> pairId_one_and_two = features_flight.filter(s ->!s[NUMBER_ARR_DELAY].isEmpty() && !s[0].contains("YEAR")).mapToPair(s -> new Tuple2<>(new Tuple2<>(Integer.parseInt(s[NUMBER_ORIGIN_AIRPORT_ID]),Integer.parseInt(s[NUMBER_DEST_AIRPORT_ID])),new FlightSerializable (Integer.parseInt(s[NUMBER_ARR_DELAY]), Integer.parseInt(s[NUMBER_CANCELLED]))));
 
         JavaPairRDD<Tuple2<Integer,Integer>, FlightSerializable> key_result = pairId_one_and_two.combineByKey(
@@ -51,7 +53,7 @@ public class AirportFromTo {
         //for ( i: output_result){
           //  System.out.println(i);
         //}
-        result.saveAsTextFile("output");
+        //result.saveAsTextFile("output");
     }
 
 
