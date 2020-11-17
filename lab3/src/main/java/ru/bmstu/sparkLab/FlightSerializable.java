@@ -7,19 +7,19 @@ import java.io.Serializable;
 import java.util.Map;
 
 public class FlightSerializable implements Serializable{
-    private int arr_delay;
+    private float arr_delay;
     private int cancelled;
-    private int maxArr_delay;
+    private float maxArr_delay;
     private int num_flight;
     private int num_cancelled;
     private int num_dellay;
 
-   public FlightSerializable(int arr_delay, int cancelled){
+   public FlightSerializable(float arr_delay, int cancelled){
         this.arr_delay = arr_delay;
         this.cancelled = cancelled;
 
     }
-    public FlightSerializable(int maxArr_delay, int num_flight, int num_cancelled, int num_dellay){
+    public FlightSerializable(float maxArr_delay, int num_flight, int num_cancelled, int num_dellay){
        this.maxArr_delay =maxArr_delay;
        this.num_flight = num_flight;
        this.num_cancelled = num_cancelled;
@@ -27,7 +27,7 @@ public class FlightSerializable implements Serializable{
 
     }
 
-    public int getArr_delay_new () {
+    public float getArr_delay_new () {
         return arr_delay;
     }
 
@@ -48,7 +48,7 @@ public class FlightSerializable implements Serializable{
        return num_dellay;
     }
 
-    public int getMaxArr_delay(){
+    public float getMaxArr_delay(){
        return maxArr_delay;
     }
 
