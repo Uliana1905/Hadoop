@@ -34,7 +34,7 @@ public class DefSystem {
         MainHttp instance = new MainHttp(system);
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow =
                 instance.createRoute(system).flow(system, materializer);
-        final CompletionStage<Tcp.ServerBinding> binding = http.bindAndHandle(
+        final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
                 ConnectHttp.toHost("localhost", 8080),
                 materializer
