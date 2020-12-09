@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e83b6df-b355-460a-921a-e6835dc14f72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/AirportFromTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/sparkLab/FlightSerializable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -222,7 +221,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.016008537" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
