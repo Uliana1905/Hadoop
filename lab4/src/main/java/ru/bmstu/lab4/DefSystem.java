@@ -6,9 +6,9 @@ package ru.bmstu.lab4;
 import java.io.IOException;
 import java.util.concurrent.CompletionStage;
 
-
 public class DefSystem {
-    public static void main( String []args) throws IOException {
+    public static void
+    main( String []args) throws IOException {
         ActorSystem system = ActorSystem.create("lab4");
         ActorRef store_actor = system.actorOf(Props.create(StoreActor.class), "storeActor")
         ActorRef execute_actor = system.actorOf(Props.create(ExecuteActor.class), "executeActor"
