@@ -141,7 +141,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Flight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sparkLab" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -178,7 +214,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
+    <frame x="0" y="-1" width="1920" height="1040" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17289221" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
