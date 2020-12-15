@@ -33,6 +33,8 @@ public class DefSystem {
         //ActorRef store_actor = system.actorOf(Props.create(StoreActor.class), "storeActor");
         //ActorRef execute_actor = system.actorOf(Props.create(ExecuteActor.class), "executeActor");
         //ActorSystem system = ActorSystem.create("routes");
+        ActorRef actorRouter = system.actorOf(Props.create(ActorRouter.class ));
+
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         DefSystem instance = new DefSystem();
@@ -53,7 +55,7 @@ public class DefSystem {
                 get(
                         () -> parameter("packageId",
                                 (id) -> {
-                                    Future <Object> f = PatternsCS.ask(actorRouter, new TypeResult(id), );
+                                    Future <Object> f = PatternsCS.ask(actorRouter, new TypeResult(id), 100);
                                 })
                 ),
                 post(
