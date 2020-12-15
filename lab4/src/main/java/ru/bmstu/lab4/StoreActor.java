@@ -24,7 +24,7 @@ public class StoreActor extends AbstractActor {
                     store.put("key", results);
                     String id = req.getPackageId();
                     ArrayList<String> result = store.get(id);
-                    getSender().tell(new )
+                    getSender().tell(new StoreType )
                         }
 
                         //new StoreType(req.getPackageId(), store.get(req.getPackageId())), self())
