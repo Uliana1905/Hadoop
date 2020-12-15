@@ -11,7 +11,7 @@ public class ActorRouter extends AbstractActor{
     private final ActorRef Executors = getContext().actorOf(new RoundRobinPool(5).props(Props.create(ExecuteActor,class)));
     private final ActorRef storActor = getContext().actorOf(Props.create(StoreActor.class));
     private static ActorAttributes.SupervisionStrategy strategy =
-            new OneForOneStrategy(10,Duraction.ofMinutes())
+            new OneForOneStrategy(10,Duraction.ofSeconds(10))
 
 }
 
