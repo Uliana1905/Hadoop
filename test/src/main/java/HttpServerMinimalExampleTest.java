@@ -1,4 +1,4 @@
-package ru.bmstu.javascript.tester;
+
 
 import akka.NotUsed;
 import akka.actor.ActorSystem;
