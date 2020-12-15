@@ -26,6 +26,14 @@ public class ReceiveJSON {
         this.tests = tests;
 
     }
-    public 
+    public String getPackageId(){
+        return packageId;
+    }
+    public String getJsScript(){
+        return jsScript;
+    }
+    public String getFunctionName(){
+        return functionName;
+    }
 
 }
