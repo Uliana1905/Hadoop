@@ -13,7 +13,7 @@ public class ReceiveJSON {
     @JsonProperty ("functionName")
     private final String functionName;
     @JsonProperty ("tests")
-    private final ArrayList<String> tests;
+    private final ArrayList<ContentTest> tests;
 
     @JsonCreator
     public ReceiveJSON(@JsonProperty("packageId") String packageId,
