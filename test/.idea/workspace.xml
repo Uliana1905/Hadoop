@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="620e5798-84c0-4f72-a9c0-08cac5b4547d" name="Default Changelist" comment="" />
+    <list default="true" id="620e5798-84c0-4f72-a9c0-08cac5b4547d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4/src/main/java/ru/bmstu/lab4/ActorRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/src/main/java/ru/bmstu/lab4/ActorRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -164,6 +168,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="UI Designer" />
