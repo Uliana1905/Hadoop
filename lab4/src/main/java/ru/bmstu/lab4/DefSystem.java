@@ -53,7 +53,7 @@ public class DefSystem {
                 get(
                         () -> parameter("packageId",
                                 (id) -> {
-                                    Future <Object> f = PatternsCS.ask(actorRouter, new get());
+                                    Future <Object> f = PatternsCS.ask(actorRouter, new TypeResult(id), );
                                 })
                 ),
                 post(
