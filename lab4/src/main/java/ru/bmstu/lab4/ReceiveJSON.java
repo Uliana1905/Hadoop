@@ -13,13 +13,13 @@ public class ReceiveJSON {
     @JsonProperty ("functionName")
     private final String functionName;
     @JsonProperty ("tests")
-    private final ArrayList<ContentTest> tests;
+    private final ArrayList<ContentTests> tests;
 
     @JsonCreator
     public ReceiveJSON(@JsonProperty("packageId") String packageId,
                        @JsonProperty("jsScript") String jsScript,
                        @JsonProperty("functionName") String functionName,
-                       @JsonProperty ("tests")ArrayList<String> tests){
+                       @JsonProperty ("tests")ArrayList<ContentTests> tests){
         this.packageId = packageId;
         this.functionName = functionName;
         this.jsScript = jsScript;
