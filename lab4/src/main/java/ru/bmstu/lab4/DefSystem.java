@@ -51,12 +51,12 @@ public class DefSystem {
                                 (id) -> complete(""+ id + "\n"))
                 ),
                 post(
-                        () -> entity(Jackson.unmarshaller(RequestBody.class),
+                        () -> entity(Jackson.unmarshaller(ReceiveJSON.class),
                                 (requestBody) -> complete(requestBody.getFunctionName()))
                 )
         );
     }
-    }
-
-
 }
+
+
+
