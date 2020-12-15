@@ -271,8 +271,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="961" y="0" width="959" height="1039" extended-state="4" />
-    <editor active="true" />
+    <frame x="961" y="0" width="959" height="1039" extended-state="5" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
