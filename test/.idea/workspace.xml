@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="620e5798-84c0-4f72-a9c0-08cac5b4547d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab4/src/main/java/ru/bmstu/lab4/DefSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/src/main/java/ru/bmstu/lab4/DefSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HttpServerMinimalExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpServerMinimalExampleTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="620e5798-84c0-4f72-a9c0-08cac5b4547d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -167,15 +163,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="961" y="0" width="959" height="1039" extended-state="5" />
+    <frame x="0" y="-1" width="1920" height="1040" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.032858707" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.016008537" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.06557377" />
+      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.06550218" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
