@@ -20,7 +20,7 @@ import javax.script.ScriptException;
 import java.io.IOException;
 import java.util.concurrent.CompletionStage;
 
-public class JavaScriptTester extends AllDirectives {
+public class HttpServerMinimalExampleTest extends AllDirectives {
     public static void main(String[] args) throws ScriptException, NoSuchMethodException, IOException {
 
 //        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
@@ -32,7 +32,7 @@ public class JavaScriptTester extends AllDirectives {
         ActorSystem system = ActorSystem.create("routes");
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
-        JavaScriptTester instance = new JavaScriptTester();
+        HttpServerMinimalExampleTest instance = new HttpServerMinimalExampleTest();
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow =
                 instance.createRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
