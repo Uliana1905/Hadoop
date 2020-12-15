@@ -30,9 +30,6 @@ public class DefSystem {
     public static void
     main( String []args) throws IOException {
         ActorSystem system = ActorSystem.create("lab4");
-        //ActorRef store_actor = system.actorOf(Props.create(StoreActor.class), "storeActor");
-        //ActorRef execute_actor = system.actorOf(Props.create(ExecuteActor.class), "executeActor");
-        //ActorSystem system = ActorSystem.create("routes");
         ActorRef actorRouter = system.actorOf(Props.create(ActorRouter.class ));
 
         final Http http = Http.get(system);
@@ -47,7 +44,7 @@ public class DefSystem {
         System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
         System.in.read();
         binding.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
-       // ActorRef actorRouter = system.actorOf(Props.create(ActorRouter.class ));
+
     }
 
     private Route createRoute(ActorRef actorRouter) {
@@ -56,7 +53,7 @@ public class DefSystem {
                         () -> parameter("packageId",
                                 (id) -> {
                                     Future<Object> f = Patterns.ask(actorRouter, new TypeResult(id), 100);
-                                    return compliteOk
+                                    return completeOKWithFuture(f, Jackson.marshaller());
                                 })
                 ),
                 post(
