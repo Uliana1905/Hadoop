@@ -39,7 +39,7 @@ public class DefSystem {
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         DefSystem instance = new DefSystem();
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow =
-                instance.createRoute().flow(system, materializer);
+                instance.createRoute(actorRouter).flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
                 ConnectHttp.toHost("localhost", 8080),
@@ -47,15 +47,15 @@ public class DefSystem {
         System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
         System.in.read();
         binding.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
-        ActorRef actorRouter = system.actorOf(Props.create(ActorRouter.class ));
+       // ActorRef actorRouter = system.actorOf(Props.create(ActorRouter.class ));
     }
 
-    private Route createRoute() {
+    private Route createRoute(ActorRef actorRouter) {
         return route(
                 get(
                         () -> parameter("packageId",
                                 (id) -> {
-                                    Future <Object> f = PatternsCS.ask(actorRouter, new TypeResult(id), 100);
+                                    Future<Object> f = PatternsCS.ask(actorRouter, new TypeResult(id), 100);
                                 })
                 ),
                 post(

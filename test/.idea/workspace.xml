@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="620e5798-84c0-4f72-a9c0-08cac5b4547d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../lab4/src/main/java/ru/bmstu/lab4/DefSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/src/main/java/ru/bmstu/lab4/DefSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab4/src/main/java/ru/bmstu/lab4/TypeResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/src/main/java/ru/bmstu/lab4/TypeResult.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -89,7 +88,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="5">
     <option name="x" value="961" />
     <option name="width" value="959" />
     <option name="height" value="1039" />
@@ -166,7 +165,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="961" y="0" width="959" height="1039" extended-state="4" />
+    <frame x="961" y="0" width="959" height="1039" extended-state="5" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
