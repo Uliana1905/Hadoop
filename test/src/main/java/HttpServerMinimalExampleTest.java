@@ -43,6 +43,8 @@ public class HttpServerMinimalExampleTest extends AllDirectives {
                 path("hello", () ->
                         get(() ->
                                 complete("<h1>Say hello to akka-http</h1>"))),
-                path());
+                path("test", () ->
+                        get(() ->
+                                complete("<h1>ты на дружочке, пирожочке <h1>"))));
     }
 }
