@@ -12,12 +12,13 @@ public class ActorRouter extends AbstractActor{
 
     private final ActorRef Executors = getContext().actorOf(new RoundRobinPool(5).props(Props.create(ExecuteActor,class)));
     private final ActorRef storActor = getContext().actorOf(Props.create(StoreActor.class));
-    private static ActorAttributes.SupervisionStrategy strategy =
-            new OneForOneStrategy(10, Duration.ofSeconds(10), DeciderBuilder.matchAny(o -> restart()).build());
+   // private static ActorAttributes.SupervisionStrategy strategy =
+      ///      new OneForOneStrategy(10, Duration.ofSeconds(10), DeciderBuilder.matchAny(o -> restart()).build());
 
-    public SupervisorStrategy supervisorStrategy() {
-        return strategy;
-    }
+   // public SupervisorStrategy supervisorStrategy() {
+      //  return strategy;
+   // }
+
 
 }
 
