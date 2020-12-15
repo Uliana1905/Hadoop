@@ -2,7 +2,8 @@ package ru.bmstu.lab4;
 
 
 import akka.actor.AbstractActor;
-        import akka.japi.pf.ReceiveBuilder;
+import akka.actor.ActorRef;
+import akka.japi.pf.ReceiveBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class StoreActor extends AbstractActor {
                     store.put("key", results);
                     String id = req.getPackageId();
                     ArrayList<String> result = store.get(id);
-                    getSender().tell(new StoreType )
+                    getSender().tell(new StoreType (id, result), ActorRef.noSender());
                         }
 
                         //new StoreType(req.getPackageId(), store.get(req.getPackageId())), self())

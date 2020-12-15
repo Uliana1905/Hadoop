@@ -1,20 +1,21 @@
 package ru.bmstu.lab4;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class StoreType {
-    private Map<String, String> value;
+    private ArrayList<String> value;
     private String key;
 
     public String getKey(){
         return key;
     }
 
-    public Map <String, String> getValue(){
+    public ArrayList getValue(){
         return value;
     }
 
-    public StoreType (String key, Map<String, String> value ){
+    public StoreType (String key, ArrayList<String> value ){
         this.key = key;
         this.value = value;
     }
