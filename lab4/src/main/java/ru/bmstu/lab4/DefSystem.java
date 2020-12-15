@@ -5,6 +5,8 @@ package ru.bmstu.lab4;
 import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
+import akka.actor.Props;
+import akka.compat.Future;
 import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
@@ -13,6 +15,7 @@ import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.server.AllDirectives;
 import akka.http.javadsl.server.Route;
+import akka.pattern.PatternsCS;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
@@ -42,14 +45,16 @@ public class DefSystem {
         System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
         System.in.read();
         binding.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
-        
+        ActorRef actorRouter = system.actorOf(Props.create(ActorRouter.class ));
     }
 
     private Route createRoute() {
         return route(
                 get(
                         () -> parameter("packageId",
-                                (id) -> complete(""+ id + "\n"))
+                                (id) -> {
+                                    Future <Object> f = PatternsCS.ask(actorRouter, new );
+                                })
                 ),
                 post(
                         () -> entity(Jackson.unmarshaller(ReceiveJSON.class),
