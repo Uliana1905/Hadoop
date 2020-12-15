@@ -22,7 +22,7 @@ public class ActorRouter extends AbstractActor{
 
     public Receive createReceive(){
         return ReceiveBuilder.create()
-                .match(TypeResult.class, msg -> storActor.tell ( msg, sender())).build()
+                .match(TypeResult.class, msg -> storActor.tell ( msg, sender()).build())
                 .match(StoreMessage.class, ExecutorActor.tell(msg, ActoRef.nosender()));
     }
 }
