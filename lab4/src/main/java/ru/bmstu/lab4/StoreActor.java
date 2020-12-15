@@ -22,7 +22,7 @@ public class StoreActor extends AbstractActor {
                 .match(GetMessage.class, req -> {
                     ArrayList<String> results = new ArrayList<>();
                     results.add("hear you can see result\n");
-                    store.put("key", results);
+                    store.put("1", results);
                     String id = req.getPackageId();
                     ArrayList<String> result = store.get(id);
                     getSender().tell(new StoreType (id, result), ActorRef.noSender());
