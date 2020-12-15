@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01948eec-6d00-4081-a8d2-bd09d36d67fc" name="Default Changelist" comment="" />
+    <list default="true" id="01948eec-6d00-4081-a8d2-bd09d36d67fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreActor.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="300">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,7 +149,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/FunctionForStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/GetMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreType.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/ReceiveJSON.java" />
@@ -155,6 +156,7 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/DefSystem.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/ActorRouter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/ExecutorActor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreActor.java" />
       </list>
     </option>
   </component>
@@ -331,13 +333,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/GetMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -412,10 +407,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/GetMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="300">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
