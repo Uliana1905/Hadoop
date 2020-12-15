@@ -2,6 +2,7 @@
 
 import akka.NotUsed;
 import akka.actor.ActorSystem;
+import akka.compat.Future;
 import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
@@ -52,7 +53,9 @@ public class HttpServerMinimalExampleTest extends AllDirectives {
         return route(
                 get(
                         () -> parameter("packageId",
-                                (id) -> complete(""+ id + "\n"))
+                                (id) -> {
+                                    Future <Object> f = ask()
+                                })
                 ),
                 post(
                         () -> entity(Jackson.unmarshaller(RequestBody.class),
