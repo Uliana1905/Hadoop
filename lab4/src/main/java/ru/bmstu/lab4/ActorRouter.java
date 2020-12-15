@@ -1,5 +1,5 @@
 package ru.bmstu.lab4;
 
-public class ActorRouter {
-    
+public class ActorRouter extends AbstactActor{
+
 }
