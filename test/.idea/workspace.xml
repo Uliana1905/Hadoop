@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="620e5798-84c0-4f72-a9c0-08cac5b4547d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/HttpServerMinimalExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpServerMinimalExampleTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="620e5798-84c0-4f72-a9c0-08cac5b4547d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/HttpServerMinimalExampleTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="444">
-              <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
+              <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,7 +180,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/HttpServerMinimalExampleTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
-          <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
+          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
