@@ -1,13 +1,7 @@
 package ru.bmstu.lab4;
 import akka.actor.*;
-import akka.japi.pf.DeciderBuilder;
 import akka.japi.pf.ReceiveBuilder;
 import akka.routing.RoundRobinPool;
-import akka.stream.ActorAttributes;
-
-import java.time.Duration;
-
-import static akka.actor.SupervisorStrategy.restart;
 
 public class ActorRouter extends AbstractActor{
 
@@ -23,7 +17,7 @@ public class ActorRouter extends AbstractActor{
     public Receive createReceive(){
         return ReceiveBuilder.create()
                 .match(StoreMessage.class, msg -> executors.tell(msg, ActorRef.noSender()))
-                .match(TypeResult.class, msg -> storActor.tell ( msg, sender())).build();
+                .match(MessageResult.class, msg -> storActor.tell ( msg, sender())).build();
     }
 }
 

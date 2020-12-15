@@ -19,7 +19,7 @@ public class StoreActor extends AbstractActor {
                     }
                     store.get(m.getPackageId()).put(m.getTestName(), m.getResult());
                 })*/
-                .match(GetMessage.class, req -> {
+                .match(MessageResult.class, req -> {
                     ArrayList<String> results = new ArrayList<>();
                     results.add("hear you can see result\n");
                     store.put("1", results);

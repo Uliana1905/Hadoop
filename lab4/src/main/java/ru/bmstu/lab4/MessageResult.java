@@ -1,9 +1,9 @@
 package ru.bmstu.lab4;
 
-public class TypeResult {
+public class MessageResult {
     private final String packageId;
 
-    public TypeResult(String packageId){
+    public MessageResult(String packageId){
         this.packageId= packageId;
     }
 
