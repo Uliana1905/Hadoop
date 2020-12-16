@@ -21,7 +21,12 @@ public class ActorRouter extends AbstractActor{
                 .match(ReceiveJSON.class, msg ->{
                     ArrayList<ContentTests> o =  msg.getTests();
                         for (ContentTests i:  o){
-                            new oneTest test = 
+                              oneTest test = new oneTest (
+                                      msg.getPackageId(),
+                                      msg.getJsScript(),
+                                      msg. 
+                              )
+
                         }
 
 
