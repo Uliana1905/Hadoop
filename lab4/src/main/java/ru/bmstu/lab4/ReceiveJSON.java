@@ -35,5 +35,8 @@ public class ReceiveJSON {
     public String getFunctionName(){
         return functionName;
     }
+    public ArrayList <ContentTests> getTests(){
+        return tests;
+    }
 
 }
