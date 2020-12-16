@@ -13,18 +13,19 @@ public class ExecutorActor extends AbstractActor {
 
 
 
-
-    ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-    engine.eval(one_test.geJsSctipt);
-    Invocable invocable = (Invocable) engine;
-    return invocable.invokeFunction(one_test.getfunctionName(), one_test.getParams).toString();
+    public String SolveTask (oneTest one_test) {
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+        engine.eval(one_test.getJsScript);
+        Invocable invocable = (Invocable) engine;
+        return invocable.invokeFunction(one_test.getfunctionName(), one_test.getParams).toString();
+    }
 
     public Receive createReceive()
     {
         return ReceiveBuilder.create()
                 .match (oneTest.class, task -> getSender().tell(
-                        new StoreMessage(task.getPackageId(), SolveTask(task)), ActorRef.noSender()
-                ).build());
+                        new StoreMessage(task.getPackageId(), SolveTask(task)), ActorRef.noSender())).
+                        build();
     }
 
 
