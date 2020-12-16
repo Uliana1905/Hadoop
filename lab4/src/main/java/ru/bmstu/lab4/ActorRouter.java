@@ -7,9 +7,9 @@ import java.util.ArrayList;
 
 public class ActorRouter extends AbstractActor{
 
-    private final static String HOST = "localhost";
+    private final static Integer NUMBER_ROUTER = 5;
 
-    private final ActorRef executors = getContext().actorOf(new RoundRobinPool(5).props(Props.create(ExecutorActor.class)));
+    private final ActorRef executors = getContext().actorOf(new RoundRobinPool(NUMBER_ROUTER).props(Props.create(ExecutorActor.class)));
     private final ActorRef storActor = getContext().actorOf(Props.create(StoreActor.class));
 
 
