@@ -22,7 +22,7 @@ public class ExecutorActor extends AbstractActor {
     {
         return ReceiveBuilder.create()
                 .match (oneTest.class, task -> getSender().tell(
-                        
+                        new StoreMessage(task.getPackageId(), )
                 ))
     }
 

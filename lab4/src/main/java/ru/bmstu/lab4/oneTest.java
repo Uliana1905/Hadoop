@@ -35,4 +35,7 @@ public class oneTest {
     public String getJsScript() {
         return jsScript;
     }
+    public String getPackageId(){
+        return packageId;
+    }
 }
