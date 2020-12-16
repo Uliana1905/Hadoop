@@ -15,9 +15,9 @@ public class StoreActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(StoreMessage.class, m -> {
                     if (!store.containsKey(m.getPackageId())) {
-                        store.put(m.getPackageId(), ArrayList<String>);
+                        store.put(m.getPackageId(), new ArrayList<String>);
                     }
-                    store.get(m.getPackageId()).put(m.getTestName(), m.getResult());
+                    store.get(m.getPackageId()).put(, m.getResult());
                 })
                 /*.match(MessageResult.class, req -> {
                     getSender().tell(new StoreType (id, result), ActorRef.noSender());
