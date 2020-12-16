@@ -16,23 +16,18 @@ public class ActorRouter extends AbstractActor{
       //  return strategy;
    // }
 
+
+
+
     public Receive createReceive(){
         return ReceiveBuilder.create()
                 .match(ReceiveJSON.class, msg ->{
                     ArrayList<ContentTests> o =  msg.getTests();
                         for (ContentTests i:  o){
-                              oneTest test = new oneTest (
-                                      msg.getPackageId(),
-                                      msg.getJsScript(),
-                                      msg. getFunctionName(),
-                                      i.getTestName(),
-                                      i.getExpectedResult(),
-                                      i.getParams());
-
+                              oneTest test = new oneTest (msg.getPackageId(), msg.getJsScript(), msg. getFunctionName(), i.getTestName(), i.getExpectedResult(), i.getParams());
+                              executors.tell(test, ActorRef.noSender());
                         }
-
-
-                        })
+                    })
 
                 .match(MessageResult.class, msg -> storActor.tell ( msg, sender())).build();
     }
