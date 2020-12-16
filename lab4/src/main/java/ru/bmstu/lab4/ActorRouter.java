@@ -25,7 +25,7 @@ public class ActorRouter extends AbstractActor{
                     ArrayList<ContentTests> o =  msg.getTests();
                         for (ContentTests i:  o){
                               oneTest test = new oneTest (msg.getPackageId(), msg.getJsScript(), msg. getFunctionName(), i.getTestName(), i.getExpectedResult(), i.getParams());
-                              executors.tell(test, ActorRef.noSender());
+                              executors.tell(test, storActor);
                         }
                     })
 
