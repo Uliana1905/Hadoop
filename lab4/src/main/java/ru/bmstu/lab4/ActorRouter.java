@@ -25,7 +25,9 @@ public class ActorRouter extends AbstractActor{
                                       msg.getPackageId(),
                                       msg.getJsScript(),
                                       msg. getFunctionName(),
-                                      i)
+                                      i.getTestName(),
+                                      i.getExpectedResult(),
+                                      i.getParams());
 
                         }
 
