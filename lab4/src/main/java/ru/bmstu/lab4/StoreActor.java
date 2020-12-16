@@ -18,10 +18,11 @@ public class StoreActor extends AbstractActor {
                         store.put(m.getPackageId(), new ArrayList<>());
                     }
                     store.get(m.getPackageId()).add(m.getResult());
-                })
+
+                }).build();
                 .match(MessageResult.class, req -> {
                     getSender().tell(new GetMessage(req.getPackageId(), store.get(req.getPackageId())), ActorRef.noSender());
-                        }).build();
+                        });
 
     }
 }
