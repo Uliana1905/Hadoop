@@ -60,7 +60,7 @@ public class DefSystem {
                                 (requestBody) -> {
                             actorRouter.tell(requestBody, ActorRef.noSender());
                             return complete("I'm done");
-                                });
+                                })
                 )
         );
     }
