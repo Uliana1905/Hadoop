@@ -16,8 +16,8 @@ public class ActorRouter extends AbstractActor{
 
     public Receive createReceive(){
         return ReceiveBuilder.create()
-                .match(StoreMessage.class, msg -> executors.tell(msg, ActorRef.noSender()))
-                
+                .match(ReceiveJSON.class, msg -> executors.tell(msg, ActorRef.noSender()))
+
                 .match(MessageResult.class, msg -> storActor.tell ( msg, sender())).build();
     }
 }
