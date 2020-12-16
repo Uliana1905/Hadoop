@@ -23,4 +23,16 @@ public class oneTest {
         this.expectedResult = expectedResult;
         this.params = params;
     }
+
+    public String getFunctionName() {
+        return functionName;
+    }
+
+    public ArrayList<String> getParams() {
+        return params;
+    }
+
+    public String getJsScript() {
+        return jsScript;
+    }
 }
