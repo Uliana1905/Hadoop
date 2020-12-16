@@ -38,4 +38,7 @@ public class oneTest {
     public String getPackageId(){
         return packageId;
     }
+    public String getExpectedResult(){
+        return expectedResult;
+    }
 }
