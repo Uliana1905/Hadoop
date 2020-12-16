@@ -36,6 +36,7 @@ public class DefSystem {
     private final static Integer TIMEOUTMILLIS = 100;
     private final static String NAME_OF_ARGUEMENTS= "packageId";
 
+    private final static String BODY_OF_COMLETE= "packageId";
 
     public static void main( String []args) throws IOException {
 
