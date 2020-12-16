@@ -6,6 +6,7 @@ public class oneTest {
     private String packageId;
     private String jsScript;
     private String functionName;
+    
     private ArrayList<String> params;
 
     public oneTest (String packageId,
