@@ -30,9 +30,11 @@ import static akka.http.javadsl.server.Directives.*;
 public class DefSystem {
     public static void main( String []args) throws IOException {
 
-        private static final String HOST = "localhost";
+        private final static String HOST = "localhost";
 
-        
+        private 
+
+
         ActorSystem system = ActorSystem.create("lab4");
         ActorRef actorRouter = system.actorOf(Props.create(ActorRouter.class ));
 
