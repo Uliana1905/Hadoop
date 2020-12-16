@@ -3,6 +3,8 @@ import akka.actor.*;
 import akka.japi.pf.ReceiveBuilder;
 import akka.routing.RoundRobinPool;
 
+import java.util.ArrayList;
+
 public class ActorRouter extends AbstractActor{
 
     private final ActorRef executors = getContext().actorOf(new RoundRobinPool(5).props(Props.create(ExecutorActor.class)));
@@ -17,7 +19,7 @@ public class ActorRouter extends AbstractActor{
     public Receive createReceive(){
         return ReceiveBuilder.create()
                 .match(ReceiveJSON.class, msg ->{
-                       ContentTests o = new ContentTests()
+                    ArrayList<ContentTests> o
                         for (ContentTests i:  msg.getTests().getParams()){
                             new oneTest test = oneTest()
                         }
