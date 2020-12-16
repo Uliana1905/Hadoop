@@ -17,12 +17,11 @@ public class StoreActor extends AbstractActor {
                     if (!store.containsKey(m.getPackageId())) {
                         store.put(m.getPackageId(), new ArrayList<String>);
                     }
-                    store.get(m.getPackageId()).put(, m.getResult());
+                    store.get(m.getPackageId()).add(m.getResult());
                 })
                 /*.match(MessageResult.class, req -> {
                     getSender().tell(new StoreType (id, result), ActorRef.noSender());
                         }).build();
                 */
-                        //new StoreType(req.getPackageId(), store.get(req.getPackageId())), self())
     }
 }
