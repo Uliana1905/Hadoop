@@ -57,7 +57,7 @@ public class DefSystem {
                 ),
                 post(
                         () -> entity(Jackson.unmarshaller(ReceiveJSON.class),
-                                (requestBody) -> complete(requestBody.getFunctionName()))
+                                (requestBody) -> actorRouter.tell(requestBody, ActorRef.noSender()))
                 )
         );
     }
