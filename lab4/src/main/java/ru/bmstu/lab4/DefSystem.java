@@ -29,13 +29,17 @@ import static akka.http.javadsl.server.Directives.*;
 
 public class DefSystem {
     private final static String HOST = "localhost";
-    
+    private final static Integer PORT = 8080;
+    private final static String NAME_OF_SYSTEM = "lab4";
+
+
+
     public static void main( String []args) throws IOException {
 
 
 
 
-        ActorSystem system = ActorSystem.create("lab4");
+        ActorSystem system = ActorSystem.create(NAME_OF_SYSTEM);
         ActorRef actorRouter = system.actorOf(Props.create(ActorRouter.class ));
 
         final Http http = Http.get(system);
@@ -45,7 +49,7 @@ public class DefSystem {
                 instance.createRoute(actorRouter).flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
-                ConnectHttp.toHost(HOST, 8080),
+                ConnectHttp.toHost(HOST, PORT),
                 materializer);
         System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
         System.in.read();
