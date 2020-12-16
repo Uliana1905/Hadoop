@@ -24,6 +24,9 @@ import java.util.concurrent.CompletionStage;
 
 import static akka.http.javadsl.server.Directives.*;
 
+public static final HOST = "localhost";
+
+
 
 public class DefSystem {
     public static void
