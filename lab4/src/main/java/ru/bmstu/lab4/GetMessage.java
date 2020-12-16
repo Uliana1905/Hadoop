@@ -16,4 +16,7 @@ public class GetMessage {
     }
 
 
+    public ArrayList<String> getResult() {
+        return result;
+    }
 }
