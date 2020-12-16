@@ -21,10 +21,12 @@ public class ExecutorActor extends AbstractActor {
         return invocable.invokeFunction(one_test.getFunctionName(), one_test.getParams().toArray()).toString();
     }
 
-    public String CompareValue(oneTest one_test){
+    public String CompareValue(oneTest one_test) throws  ScriptException, NoSuchMethodException{
         String myres = SolveTask(one_test);
         if (one_test.getExpectedResult().equals(myres)){
-            return 
+            return "functionName: " + one_test.getFunctionName() + "result = " + one_test.getExpectedResult() + ".True\n";
+        }else{
+            return "functionName: " + one_test.getFunctionName() + "result = " + one_test.getExpectedResult() + ".False" + " Correct result: " + myres;
         }
     }
 

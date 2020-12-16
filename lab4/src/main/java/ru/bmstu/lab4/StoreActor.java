@@ -13,21 +13,16 @@ public class StoreActor extends AbstractActor {
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
-                /*.match(StoreMessage.class, m -> {
+                .match(StoreMessage.class, m -> {
                     if (!store.containsKey(m.getPackageId())) {
                         store.put(m.getPackageId(), new HashMap<>());
                     }
                     store.get(m.getPackageId()).put(m.getTestName(), m.getResult());
-                })*/
-                .match(MessageResult.class, req -> {
-                    ArrayList<String> results = new ArrayList<>();
-                    results.add("hear you can see result\n");
-                    store.put("1", results);
-                    String id = req.getPackageId();
-                    ArrayList<String> result = store.get(id);
+                })
+                /*.match(MessageResult.class, req -> {
                     getSender().tell(new StoreType (id, result), ActorRef.noSender());
                         }).build();
-
+                */
                         //new StoreType(req.getPackageId(), store.get(req.getPackageId())), self())
     }
 }
