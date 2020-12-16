@@ -32,6 +32,9 @@ public class DefSystem {
     private final static Integer PORT = 8080;
     private final static String NAME_OF_SYSTEM = "lab4";
 
+    private final static String LOG = "Server online at http://localhost:8080/\nPress RETURN to stop...";
+    private final static Integer TIMEOUTMILLIS = 100;
+    private final static String NAME_OF_ARGUEMENTS= "packageId";
 
 
     public static void main( String []args) throws IOException {
@@ -51,7 +54,7 @@ public class DefSystem {
                 routeFlow,
                 ConnectHttp.toHost(HOST, PORT),
                 materializer);
-        System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
+        System.out.println(LOG);
         System.in.read();
         binding.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
 
@@ -60,9 +63,9 @@ public class DefSystem {
     private Route createRoute(ActorRef actorRouter) {
         return route(
                 get(
-                        () -> parameter("packageId",
+                        () -> parameter(NAME_OF_ARGUEMENTS,
                                 (id) -> {
-                                    Future<Object> f = Patterns.ask(actorRouter, new MessageResult(id), 100);
+                                    Future<Object> f = Patterns.ask(actorRouter, new MessageResult(id), TIMEOUTMILLIS);
                                     return completeOKWithFuture(f, Jackson.marshaller());
                                 })
                 ),
