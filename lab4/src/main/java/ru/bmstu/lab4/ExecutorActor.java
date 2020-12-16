@@ -2,6 +2,7 @@ package ru.bmstu.lab4;
 
 
 import akka.actor.AbstractActor;
+import akka.japi.pf.ReceiveBuilder;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
@@ -19,7 +20,10 @@ public class ExecutorActor extends AbstractActor {
 
     public Receive createReceive()
     {
-        return cres;
+        return ReceiveBuilder.create()
+                .match (oneTest.class, task -> getSender().tell(
+                        
+                ))
     }
 
 
