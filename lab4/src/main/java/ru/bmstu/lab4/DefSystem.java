@@ -62,7 +62,7 @@ public class DefSystem {
     private Route createRoute(ActorRef actorRouter) {
         return route(
                 get(
-                        () -> parameter( NAME_OF_ARGUEMENTS,
+                        () -> parameter( NAME_OF_ARGUEMENTS, 
                                 (id) -> {
                                     Future<Object> f = Patterns.ask(actorRouter, new MessageResult(id), TIMEOUTMILLIS);
                                     return completeOKWithFuture(f, Jackson.marshaller());
