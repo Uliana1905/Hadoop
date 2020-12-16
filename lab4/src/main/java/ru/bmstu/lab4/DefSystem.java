@@ -36,11 +36,9 @@ public class DefSystem {
     private final static Integer TIMEOUTMILLIS = 100;
     private final static String NAME_OF_ARGUEMENTS= "packageId";
 
-    private final static String BODY_OF_COMLETE= "packageId";
+    private final static String BODY_OF_COMLETE= "I'm done";
 
     public static void main( String []args) throws IOException {
-
-
 
 
         ActorSystem system = ActorSystem.create(NAME_OF_SYSTEM);
@@ -74,7 +72,7 @@ public class DefSystem {
                         () -> entity(Jackson.unmarshaller(ReceiveJSON.class),
                                 (requestBody) -> {
                             actorRouter.tell(requestBody, ActorRef.noSender());
-                            return complete("I'm done");
+                            return complete(BODY_OF_COMLETE);
                                 })
                 )
         );
