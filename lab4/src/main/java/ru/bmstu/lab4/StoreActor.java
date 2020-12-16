@@ -19,8 +19,8 @@ public class StoreActor extends AbstractActor {
                     }
                     store.get(m.getPackageId()).add(m.getResult());
                 })
-                .match(GetMessage.class, req -> {
-                    getSender().tell(, ActorRef.noSender());
+                .match(MessageResult.class, req -> {
+                    getSender().tell(new GetMessage(), ActorRef.noSender());
                         }).build();
 
     }
