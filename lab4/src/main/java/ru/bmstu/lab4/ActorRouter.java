@@ -17,8 +17,8 @@ public class ActorRouter extends AbstractActor{
     public Receive createReceive(){
         return ReceiveBuilder.create()
                 .match(ReceiveJSON.class, msg ->{
-                        for (ContentTests i: new ContentTests){
-                            new oneTest()
+                        for (ContentTests i:  msg.getParams){
+                            new oneTest test = oneTest()
                         }
 
 
