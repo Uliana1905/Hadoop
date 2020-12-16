@@ -15,7 +15,7 @@ public class ExecutorActor extends AbstractActor {
     ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
     engine.eval(jscript);
     Invocable invocable = (Invocable) engine;
-     invocable.invokeFunction(functionName, params).toString();
+    return invocable.invokeFunction(functionName, params).toString();
 
     public Receive createReceive()
     {
