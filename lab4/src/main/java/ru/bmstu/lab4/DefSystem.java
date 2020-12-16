@@ -24,13 +24,13 @@ import java.util.concurrent.CompletionStage;
 
 import static akka.http.javadsl.server.Directives.*;
 
-public static final HOST = "localhost";
 
 
 
 public class DefSystem {
-    public static void
-    main( String []args) throws IOException {
+    public static void main( String []args) throws IOException {
+
+        private static final HOST = "localhost";
         ActorSystem system = ActorSystem.create("lab4");
         ActorRef actorRouter = system.actorOf(Props.create(ActorRouter.class ));
 
