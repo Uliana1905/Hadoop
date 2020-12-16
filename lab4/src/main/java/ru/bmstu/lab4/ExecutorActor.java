@@ -2,6 +2,7 @@ package ru.bmstu.lab4;
 
 
 import akka.actor.AbstractActor;
+import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
 
 import javax.script.Invocable;
@@ -22,8 +23,8 @@ public class ExecutorActor extends AbstractActor {
     {
         return ReceiveBuilder.create()
                 .match (oneTest.class, task -> getSender().tell(
-                        new StoreMessage(task.getPackageId(), SolveTask(task))
-                ))
+                        new StoreMessage(task.getPackageId(), SolveTask(task)), ActorRef.noSender()
+                ).build());
     }
 
 
