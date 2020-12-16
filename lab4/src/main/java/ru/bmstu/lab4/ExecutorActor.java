@@ -19,7 +19,7 @@ public class ExecutorActor extends AbstractActor {
 
     public Receive createReceive()
     {
-        return null;
+        return cres;
     }
 
 
