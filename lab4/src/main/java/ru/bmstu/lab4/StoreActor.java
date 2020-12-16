@@ -15,12 +15,12 @@ public class StoreActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(StoreMessage.class, m -> {
                     if (!store.containsKey(m.getPackageId())) {
-                        store.put(m.getPackageId(), new ArrayList<String>);
+                        store.put(m.getPackageId(), new ArrayList<>());
                     }
                     store.get(m.getPackageId()).add(m.getResult());
                 })
                 .match(MessageResult.class, req -> {
-                    getSender().tell(new GetMessage(req.getPackageId(), store.get()), ActorRef.noSender());
+                    getSender().tell(new GetMessage(req.getPackageId(), store.get(req.getPackageId())), ActorRef.noSender());
                         }).build();
 
     }
