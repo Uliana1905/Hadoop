@@ -56,7 +56,8 @@ public class DefSystem {
                                  CompletionStage<Object> ans = Patterns.ask(storeActor, newMes, Duration.ofMillis(10);
                                  return ans.thenCompose(
                                          (Object answer) ->{
-                                             if (answer ) {
+                                             if ((Integer)answer!=0) {
+                                                 
 
                                              }
                                          })
