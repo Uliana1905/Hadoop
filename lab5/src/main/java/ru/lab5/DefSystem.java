@@ -49,7 +49,7 @@ public class DefSystem {
                              return new Pair<>(URL, count);
                          }).mapAsync(
                                  1, (Pair<> pair) -> {
-                                 SentActorMsg
+                                 SentActorMsg newMes = 
                         })
     }
 
