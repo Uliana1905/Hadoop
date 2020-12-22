@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0148e0c0-1fa8-46fd-81fb-0adca6fd8fcb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lab5/DefSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lab5/DefSystem.java" afterDir="false" />
-    </list>
+    <list default="true" id="0148e0c0-1fa8-46fd-81fb-0adca6fd8fcb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +78,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="5">
     <option name="width" value="959" />
     <option name="height" value="1039" />
   </component>
@@ -157,7 +155,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="959" height="1039" extended-state="4" />
+    <frame x="0" y="0" width="959" height="1039" extended-state="5" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
