@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01948eec-6d00-4081-a8d2-bd09d36d67fc" name="Default Changelist" comment="" />
+    <list default="true" id="01948eec-6d00-4081-a8d2-bd09d36d67fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../lab5/src/main/java/ru/lab5/DefSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/src/main/java/ru/lab5/DefSystem.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -186,10 +188,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-205" />
-    <option name="y" value="518" />
-    <option name="width" value="949" />
-    <option name="height" value="1037" />
+    <option name="width" value="959" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
