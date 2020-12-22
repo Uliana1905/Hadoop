@@ -12,7 +12,9 @@ public class storeActor {
     @Override
     public AbstractActor.Receive createReceive(){
         return ReceiveBuilder.create()
-                .match()
+                .match(SentActorMsg.class, req ->{
+                    
+                })
     }
 
 }
