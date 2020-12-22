@@ -68,7 +68,9 @@ public class DefSystem {
                                                          return list;
                                                      })
                                                      .mapAsync(
-                                                             pair.second(), (String url)
+                                                             pair.second(), (String url) ->{
+                                                                 
+                                                             }
                                                      )
                                          })
                         })
