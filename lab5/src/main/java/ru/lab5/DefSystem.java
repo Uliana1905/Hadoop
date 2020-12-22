@@ -48,7 +48,7 @@ public class DefSystem {
                              Integer count = Integer.parseInt(first_param.get("count").get());
                              return new Pair<>(URL, count);
                          }).mapAsync(
-                                 1, (Pair<> pair) -> {
+                                 1, (Pair<String, Integer> pair) -> {
                                  SentActorMsg newMes = new SentActorMsg(pair.first())
                         })
     }
