@@ -45,7 +45,7 @@ public class DefSystem {
         return Flow.of(HttpRequest.class)
                 .map(
                          (msg) -> {
-                             Query first_param = msg.getUri().query();
+                             Query first_param = msg.getUrl().query();
                              String URL = first_param.get("testUrl").get();
                              Integer count = Integer.parseInt(first_param.get("count").get());
                              return new Pair<>(URL, count);
