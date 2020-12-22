@@ -13,6 +13,7 @@ import akka.stream.javadsl.Flow;
 import com.sun.deploy.net.HttpRequest;
 import com.sun.deploy.net.HttpResponse;
 
+import javax.management.Query;
 import java.io.IOException;
 import java.util.concurrent.CompletionStage;
 
@@ -40,8 +41,8 @@ public class DefSystem {
     public static Flow<HttpRequest, HttpResponse, NotUsed> create (ActorMaterializer materializer, ActorRef storeActor ){
         return Flow.of(HttpRequest.class)
                 .map(
-                         (mes) -> {
-                             
+                         (msg) -> {
+                             Query query = msg.getUri().query();
                          }
                 )
     }
