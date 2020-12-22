@@ -88,10 +88,18 @@ public class DefSystem {
                                              Source<Pair<String, Integer>, NotUsed> source  = Source.single(pair);
                                              Sink<Integer, CompletionStage<Integer>> fold = Sink.fold(0, Integer::sum);
                                              RunnableGraph<CompletionStage<Integer>> runnableGraph = source.via(flow).toMat(fold, Keep.right());
+                                             CompletionStage <Integer> result = runnableGraph.run(materializer);
+                                             return result.thenApply(
+                                                     r-> new Pair<>(pair.first(), r/pair.second())
+                                             );
+                                         }
+                                 );
+    }).map(
+            (Pair<String, Integer> p )->{
+                StoreResults store  = new StoreResults(p.first(), p.second());
 
-
-                                         }).map
-                        })
+                        }
     }
+                )
 
 }
