@@ -61,6 +61,9 @@ public class DefSystem {
                                                  return CompletableFuture.completedFuture(new Pair<>(pair.first(),(Integer)answer));
                                              }
                                              Flow<Pair<String, Integer>,Integer, NotUsed> flow = Flow.<Pair<String,Integer>> create()
+                                                     .mapConcat(p ->{
+                                                         List <String>
+                                                     })
                                          })
                         })
     }
