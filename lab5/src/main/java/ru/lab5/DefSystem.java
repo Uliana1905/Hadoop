@@ -19,6 +19,7 @@ import akka.stream.javadsl.Flow;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
 public class DefSystem {
@@ -57,7 +58,7 @@ public class DefSystem {
                                  return ans.thenCompose(
                                          (Object answer) ->{
                                              if ((Integer)answer!=0) {
-                                                 return 
+                                                 return CompletableFuture.completedFuture(new Pair<>(pair.first(),(Integer)answer ));
 
                                              }
                                          })
