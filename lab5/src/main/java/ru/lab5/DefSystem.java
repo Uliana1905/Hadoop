@@ -64,7 +64,8 @@ public class DefSystem {
                                              }
                                              Flow<Pair<String, Integer>,Integer, NotUsed> flow = Flow.<Pair<String,Integer>> create()
                                                      .mapConcat(p ->{
-                                                         List<String> list = Collections.nCopies(p.second(), p.first())
+                                                         List<String> list = Collections.nCopies(p.second(), p.first());
+                                                         
                                                      })
                                          })
                         })
