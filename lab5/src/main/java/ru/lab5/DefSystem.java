@@ -49,7 +49,8 @@ public class DefSystem {
                              return new Pair<>(URL, count);
                          }).mapAsync(
                                  1, (Pair<String, Integer> pair) -> {
-                                 SentActorMsg newMes = new SentActorMsg(pair.first())
+                                 SentActorMsg newMes = new SentActorMsg(pair.first());
+                                 CompletionStage<> ans = Pattern,ask (storeActor, SentActorMsg, )
                         })
     }
 
