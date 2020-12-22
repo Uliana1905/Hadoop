@@ -56,7 +56,7 @@ public class DefSystem {
                                  return ans.thenCompose(
                                          (Object answer) ->{
                                              if (answer ) {
-                                                 
+
                                              }
                                          })
                         })
