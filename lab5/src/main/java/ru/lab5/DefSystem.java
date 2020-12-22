@@ -9,6 +9,7 @@ import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
 import akka.japi.Pair;
+import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 import com.sun.deploy.net.HttpRequest;
@@ -16,6 +17,7 @@ import com.sun.deploy.net.HttpResponse;
 
 import javax.management.Query;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.CompletionStage;
 
 public class DefSystem {
@@ -50,7 +52,10 @@ public class DefSystem {
                          }).mapAsync(
                                  1, (Pair<String, Integer> pair) -> {
                                  SentActorMsg newMes = new SentActorMsg(pair.first());
-                                 CompletionStage<> ans = Pattern,ask (storeActor, SentActorMsg, )
+                                 CompletionStage<Object> ans = Patterns.ask(storeActor, newMes, Duration.ofMillis(10);
+                                 return ans.thenCompose(
+                                         
+                                 )
                         })
     }
 
