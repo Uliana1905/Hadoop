@@ -87,7 +87,7 @@ public class DefSystem {
                                                      );
                                              Source<Pair<String, Integer>, NotUsed> source  = Source.single(pair);
                                              Sink<Integer, CompletionStage<Integer>> fold = Sink.fold(0, Integer::sum);
-                                             RunnableGraph<CompletionStage<Integer>> runnableGraph = source.via(flow).toMat(fold, Keep.right())
+                                             RunnableGraph<CompletionStage<Integer>> runnableGraph = source.via(flow).toMat(fold, Keep.right());
 
 
                                          }).map
