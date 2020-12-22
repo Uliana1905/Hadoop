@@ -19,6 +19,8 @@ import akka.stream.javadsl.Flow;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
@@ -62,7 +64,7 @@ public class DefSystem {
                                              }
                                              Flow<Pair<String, Integer>,Integer, NotUsed> flow = Flow.<Pair<String,Integer>> create()
                                                      .mapConcat(p ->{
-                                                         List <String>
+                                                         List<String> list = Collections.nCopies()
                                                      })
                                          })
                         })
