@@ -23,7 +23,7 @@ public class storeActor extends AbstractActor{
                         getSender().tell(0, ActorRef.noSender());
                     }
                 })
-                .match()
+                .match(StoreResults)
     }
 
 }
