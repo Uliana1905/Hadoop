@@ -43,6 +43,7 @@ public class DefSystem {
                 .map(
                          (msg) -> {
                              Query query = msg.getUri().query();
+                             String URL = query.get()
                          }
                 )
     }
