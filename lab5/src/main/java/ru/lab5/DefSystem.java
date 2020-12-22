@@ -60,7 +60,7 @@ public class DefSystem {
                                              if ((Integer)answer!=0) {
                                                  return CompletableFuture.completedFuture(new Pair<>(pair.first(),(Integer)answer));
                                              }
-                                             Flow
+                                             Flow<Pair<String, Integer>,Integer, NotUsed> flow = Flow.<Pair<String,Integer>> create()
                                          })
                         })
     }
