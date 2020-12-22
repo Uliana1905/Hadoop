@@ -75,7 +75,8 @@ public class DefSystem {
                                                              pair.second(), (String url) ->{
                                                                  AsyncHttpClient asyncHttpClient = asyncHttpClient();
                                                                  Instant startTime = Instant.now();
-                                                                 
+                                                                 Future<Response> whenResponse = asyncHttpClient.prepareGet(url).execute();
+                                                                 whenResponse.get();
                                                              }
                                                      )
                                          })
