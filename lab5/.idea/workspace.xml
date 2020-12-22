@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0148e0c0-1fa8-46fd-81fb-0adca6fd8fcb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lab5/DefSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lab5/DefSystem.java" afterDir="false" />
-    </list>
+    <list default="true" id="0148e0c0-1fa8-46fd-81fb-0adca6fd8fcb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -157,10 +155,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="959" height="1039" extended-state="4" />
+    <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.067908" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.03308431" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -179,7 +177,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="right" id="Maven" order="4" visible="true" weight="0.06681271" />
+      <window_info active="true" anchor="right" id="Maven" order="4" visible="true" weight="0.032550693" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
