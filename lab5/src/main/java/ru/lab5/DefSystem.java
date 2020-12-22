@@ -8,6 +8,7 @@ import akka.actor.Props;
 import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
+import akka.japi.Pair;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 import com.sun.deploy.net.HttpRequest;
@@ -44,9 +45,12 @@ public class DefSystem {
                          (msg) -> {
                              Query first_param = msg.getUri().query();
                              String URL = first_param.get("testUrl").get();
-                             Integer count = Integer.parseInt(first_param.get())
-                         }
-                )
+                             Integer count = Integer.parseInt(first_param.get("count").get());
+                             return new Pair<>(URL, count);
+                         }).mapAsync(
+                                 1, (Pair<> pair) -> {
+                                     
+                        })
     }
 
 }
