@@ -54,8 +54,11 @@ public class DefSystem {
                                  SentActorMsg newMes = new SentActorMsg(pair.first());
                                  CompletionStage<Object> ans = Patterns.ask(storeActor, newMes, Duration.ofMillis(10);
                                  return ans.thenCompose(
-                                         
-                                 )
+                                         (Object answer) ->{
+                                             if (answer ) {
+                                                 
+                                             }
+                                         })
                         })
     }
 
