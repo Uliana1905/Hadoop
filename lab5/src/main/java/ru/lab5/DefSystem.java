@@ -96,8 +96,9 @@ public class DefSystem {
                                  );
     }).map(
             (Pair<String, Integer> p )->{
-                StoreResults store  = new StoreResults(p.first(), p.second());
-
+                StoreResults storeMsg  = new StoreResults(p.first(), p.second());
+                storeActor.tell(storeMsg, ActorRef.noSender());
+                return HttpResponce.create().withEn
                         }
     }
                 )
