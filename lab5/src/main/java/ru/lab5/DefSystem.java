@@ -98,8 +98,8 @@ public class DefSystem {
             (Pair<String, Integer> p )->{
                 StoreResults storeMsg  = new StoreResults(p.first(), p.second());
                 storeActor.tell(storeMsg, ActorRef.noSender());
-                return HttpResponce.create().withEn
-                        }
+                return HttpResponse.create().withEntity("avrg" + p.first()+ "=" + p.second() + "\n");
+            }
     }
                 )
 
