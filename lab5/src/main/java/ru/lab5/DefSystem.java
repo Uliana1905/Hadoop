@@ -53,54 +53,54 @@ public class DefSystem {
                 .thenAccept(unbound -> system.terminate()); // and shutdown when done
     }
 
-    public static Flow<HttpRequest, HttpResponse, NotUsed> create (ActorMaterializer materializer, ActorRef storeActor ){
+    public static Flow<HttpRequest, HttpResponse, NotUsed> create (ActorMaterializer materializer, ActorRef storeActor ) {
         return Flow.of(HttpRequest.class)
                 .map(
-                         (msg) -> {
-                             Query first_param = msg.getUri().query();
-                             String URL = first_param.get("testUrl").get();
-                             Integer count = Integer.parseInt(first_param.get("count").get());
-                             return new Pair<>(URL, count);
-                         }).mapAsync(
-                                 1, (Pair<String, Integer> pair) -> {
-                                 SentActorMsg newMes = new SentActorMsg(pair.first());
-                                 CompletionStage<Object> ans = Patterns.ask(storeActor, newMes, Duration.ofMillis(10));
-                                 return ans.thenCompose(
-                                         (Object answer) ->{
-                                             if ((Integer)answer!=0) {
-                                                 return CompletableFuture.completedFuture(new Pair<>(pair.first(),(Integer)answer));
-                                             }
-                                             Flow<Pair<String, Integer>,Integer, NotUsed> flow = Flow.<Pair<String,Integer>> create()
-                                                     .mapConcat(p ->{
-                                                         List<String> list = Collections.nCopies(p.second(), p.first());
-                                                         return list;
-                                                     })
-                                                     .mapAsync(
-                                                             pair.second(), (String url) ->{
-                                                                 AsyncHttpClient asyncHttpClient = asyncHttpClient();
-                                                                 Instant startTime = Instant.now();
-                                                                 Future<Response> whenResponse = asyncHttpClient.prepareGet(url).execute();
-                                                                 whenResponse.get();
-                                                                 long resultTime = startTime.until(Instant.now(), ChronoUnit.MILLIS);
-                                                                 return CompletableFuture.completedFuture((int)resultTime);
-                                                             }
-                                                     );
-                                             Source<Pair<String, Integer>, NotUsed> source  = Source.single(pair);
-                                             Sink<Integer, CompletionStage<Integer>> fold = Sink.fold(0, Integer::sum);
-                                             RunnableGraph<CompletionStage<Integer>> runnableGraph = source.via(flow).toMat(fold, Keep.right());
-                                             CompletionStage <Integer> result = runnableGraph.run(materializer);
-                                             return result.thenApply(
-                                                     r-> new Pair<>(pair.first(), r/pair.second())
-                                             );
-                                         }
-                                 );
-    }).map(
-            (Pair<String, Integer> p )->{
-                StoreResults storeMsg  = new StoreResults(p.first(), p.second());
-                storeActor.tell(storeMsg, ActorRef.noSender());
-                return HttpResponse.create().withEntity("avrg" + p.first()+ "=" + p.second() + "\n");
-            }
+                        (msg) -> {
+                            Query first_param = msg.getUri().query();
+                            String URL = first_param.get("testUrl").get();
+                            Integer count = Integer.parseInt(first_param.get("count").get());
+                            return new Pair<>(URL, count);
+                        }).mapAsync(
+                        1, (Pair<String, Integer> pair) -> {
+                            SentActorMsg newMes = new SentActorMsg(pair.first());
+                            CompletionStage<Object> ans = Patterns.ask(storeActor, newMes, Duration.ofMillis(10));
+                            return ans.thenCompose(
+                                    (Object answer) -> {
+                                        if ((Integer) answer != 0) {
+                                            return CompletableFuture.completedFuture(new Pair<>(pair.first(), (Integer) answer));
+                                        }
+                                        Flow<Pair<String, Integer>, Integer, NotUsed> flow = Flow.<Pair<String, Integer>>create()
+                                                .mapConcat(p -> {
+                                                    List<String> list = Collections.nCopies(p.second(), p.first());
+                                                    return list;
+                                                })
+                                                .mapAsync(
+                                                        pair.second(), (String url) -> {
+                                                            AsyncHttpClient asyncHttpClient = asyncHttpClient();
+                                                            Instant startTime = Instant.now();
+                                                            Future<Response> whenResponse = asyncHttpClient.prepareGet(url).execute();
+                                                            whenResponse.get();
+                                                            long resultTime = startTime.until(Instant.now(), ChronoUnit.MILLIS);
+                                                            return CompletableFuture.completedFuture((int) resultTime);
+                                                        }
+                                                );
+                                        Source<Pair<String, Integer>, NotUsed> source = Source.single(pair);
+                                        Sink<Integer, CompletionStage<Integer>> fold = Sink.fold(0, Integer::sum);
+                                        RunnableGraph<CompletionStage<Integer>> runnableGraph = source.via(flow).toMat(fold, Keep.right());
+                                        CompletionStage<Integer> result = runnableGraph.run(materializer);
+                                        return result.thenApply(
+                                                r -> new Pair<>(pair.first(), r / pair.second())
+                                        );
+                                    }
+                            );
+                        }).map(
+                        (Pair<String, Integer> p) -> {
+                            StoreResults storeMsg = new StoreResults(p.first(), p.second());
+                            storeActor.tell(storeMsg, ActorRef.noSender());
+                            return HttpResponse.create().withEntity("avrg" + p.first() + "=" + p.second() + "\n");
+                        }
+                );
     }
-                )
 
 }
