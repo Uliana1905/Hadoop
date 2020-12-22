@@ -67,7 +67,9 @@ public class DefSystem {
                                                          List<String> list = Collections.nCopies(p.second(), p.first());
                                                          return list;
                                                      })
-                                                     .mapAsync()
+                                                     .mapAsync(
+                                                             pair.second(), (String url)
+                                                     )
                                          })
                         })
     }
