@@ -1,5 +1,7 @@
 package ru.lab5;
 
+import akka.actor.ActorRef;
+
 import com.sun.deploy.net.HttpRequest;
 import com.sun.deploy.net.HttpResponse;
 
