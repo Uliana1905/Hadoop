@@ -14,7 +14,7 @@ import akka.http.javadsl.model.Query;
 import akka.japi.Pair;
 import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
-import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.*;
 import org.asynchttpclient.AsyncHttpClient;
 import org.asynchttpclient.Response;
 
@@ -22,6 +22,7 @@ import org.asynchttpclient.Response;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -63,7 +64,7 @@ public class DefSystem {
                          }).mapAsync(
                                  1, (Pair<String, Integer> pair) -> {
                                  SentActorMsg newMes = new SentActorMsg(pair.first());
-                                 CompletionStage<Object> ans = Patterns.ask(storeActor, newMes, Duration.ofMillis(10);
+                                 CompletionStage<Object> ans = Patterns.ask(storeActor, newMes, Duration.ofMillis(10));
                                  return ans.thenCompose(
                                          (Object answer) ->{
                                              if ((Integer)answer!=0) {
@@ -80,10 +81,16 @@ public class DefSystem {
                                                                  Instant startTime = Instant.now();
                                                                  Future<Response> whenResponse = asyncHttpClient.prepareGet(url).execute();
                                                                  whenResponse.get();
-                                                                 
+                                                                 long resultTime = startTime.until(Instant.now(), ChronoUnit.MILLIS);
+                                                                 return CompletableFuture.completedFuture((int)resultTime);
                                                              }
-                                                     )
-                                         })
+                                                     );
+                                             Source<Pair<String, Integer>, NotUsed> source  = Source.single(pair);
+                                             Sink<Integer, CompletionStage<Integer>> fold = Sink.fold(0, Integer::sum);
+                                             RunnableGraph<CompletionStage<Integer>> runnableGraph = source.via(flow).toMat(fold, Keep.right())
+
+
+                                         }).map
                         })
     }
 
