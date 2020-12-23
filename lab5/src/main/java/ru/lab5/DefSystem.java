@@ -38,9 +38,17 @@ public class DefSystem {
     private final static String INF_OF_START = "start!";
     private final static String NAME_OF_SYSTEM = "routes";
     private final static String HOST = "localhost";
-    private final static String
-    private final static String
+    private final static String STARTWORK = "Server online at http://localhost:8080/\nPress RETURN to stop...";
+    private final static String RESULT_STR_AVRG = "avrg ";
+    private final static String RESULT_STR_EQL = " = ";
+    private final static String RESULT_STR_NEWSRT = "\n";
+    private final static String STR_COUNT = "count";
     private final static Integer PORT = 8080;
+    private final static Integer PARALLELISM = 1;
+    private final static Integer NOT_IN_STORE = 0;
+    private final static Integer ZERO = 0;
+
+
 
     public static void main(String[] args) throws IOException {
         System.out.println(INF_OF_START);
@@ -54,7 +62,7 @@ public class DefSystem {
                 ConnectHttp.toHost(HOST, PORT),
                 materializer
         );
-        System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
+        System.out.println(STARTWORK);
         System.in.read();
         binding
                 .thenCompose(ServerBinding::unbind)
@@ -67,15 +75,15 @@ public class DefSystem {
                         (msg) -> {
                             Query first_param = msg.getUri().query();
                             String URL = first_param.get(STR_TESTURL).get();
-                            Integer count = Integer.parseInt(first_param.get("count").get());
+                            Integer count = Integer.parseInt(first_param.get(STR_COUNT).get());
                             return new Pair<>(URL, count);
                         }).mapAsync(
-                        1, (Pair<String, Integer> pair) -> {
+                        PARALLELISM, (Pair<String, Integer> pair) -> {
                             SentActorMsg newMes = new SentActorMsg(pair.first());
                             CompletionStage<Object> ans = Patterns.ask(storeActor, newMes, Duration.ofMillis(10));
                             return ans.thenCompose(
                                     (Object answer) -> {
-                                        if ((Integer) answer != 0) {
+                                        if ((Integer) answer != NOT_IN_STORE) {
                                             return CompletableFuture.completedFuture(new Pair<>(pair.first(), (Integer) answer));
                                         }
                                         Flow<Pair<String, Integer>, Integer, NotUsed> flow = Flow.<Pair<String, Integer>>create()
@@ -94,7 +102,7 @@ public class DefSystem {
                                                         }
                                                 );
                                         Source<Pair<String, Integer>, NotUsed> source = Source.single(pair);
-                                        Sink<Integer, CompletionStage<Integer>> fold = Sink.fold(0, Integer::sum);
+                                        Sink<Integer, CompletionStage<Integer>> fold = Sink.fold(ZERO, Integer::sum);
                                         RunnableGraph<CompletionStage<Integer>> runnableGraph = source.via(flow).toMat(fold, Keep.right());
                                         CompletionStage<Integer> result = runnableGraph.run(materializer);
                                         return result.thenApply(
@@ -106,7 +114,7 @@ public class DefSystem {
                         (Pair<String, Integer> p) -> {
                             StoreResults storeMsg = new StoreResults(p.first(), p.second());
                             storeActor.tell(storeMsg, ActorRef.noSender());
-                            return HttpResponse.create().withEntity("avrg" + p.first() + "=" + p.second() + "\n");
+                            return HttpResponse.create().withEntity(RESULT_STR_AVRG + p.first() + RESULT_STR_EQL + p.second() + RESULT_STR_NEWSRT);
                         }
                 );
     }
