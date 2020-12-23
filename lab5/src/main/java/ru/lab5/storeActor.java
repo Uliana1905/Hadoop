@@ -8,6 +8,7 @@ import akka.japi.pf.ReceiveBuilder;
 import java.util.HashMap;
 
 public class storeActor extends AbstractActor{
+    private final static Integer MSG_NOT_IN_STORE = 0;
 
     private HashMap <String,Integer> store =  new HashMap<>();
 
@@ -20,7 +21,7 @@ public class storeActor extends AbstractActor{
                     if (result!=null){
                         getSender().tell(result, ActorRef.noSender());
                     }else {
-                        getSender().tell(0, ActorRef.noSender());
+                        getSender().tell(MSG_NOT_IN_STORE, ActorRef.noSender());
                     }
                 })
                 .match(StoreResults.class, req ->{

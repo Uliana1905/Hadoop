@@ -45,7 +45,7 @@ public class DefSystem {
     private final static String STR_COUNT = "count";
     private final static Integer PORT = 8080;
     private final static Integer PARALLELISM = 1;
-    private final static Integer NOT_IN_STORE = 0;
+    private final static Integer IN_STORE = 0;
     private final static Integer ZERO = 0;
 
 
@@ -83,7 +83,7 @@ public class DefSystem {
                             CompletionStage<Object> ans = Patterns.ask(storeActor, newMes, Duration.ofMillis(10));
                             return ans.thenCompose(
                                     (Object answer) -> {
-                                        if ((Integer) answer != NOT_IN_STORE) {
+                                        if ((Integer) answer != IN_STORE) {
                                             return CompletableFuture.completedFuture(new Pair<>(pair.first(), (Integer) answer));
                                         }
                                         Flow<Pair<String, Integer>, Integer, NotUsed> flow = Flow.<Pair<String, Integer>>create()
