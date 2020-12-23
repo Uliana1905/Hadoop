@@ -34,16 +34,24 @@ import static org.asynchttpclient.Dsl.asyncHttpClient;
 
 public class DefSystem {
 
+    private final static String STR_TESTURL = "testUrl";
+    private final static String INF_OF_START = "start!";
+    private final static String NAME_OF_SYSTEM = "routes";
+    private final static String HOST = "localhost";
+    private final static String
+    private final static String
+    private final static Integer PORT = 8080;
+
     public static void main(String[] args) throws IOException {
-        System.out.println("start!");
-        ActorSystem system = ActorSystem.create("routes");
+        System.out.println(INF_OF_START);
+        ActorSystem system = ActorSystem.create(NAME_OF_SYSTEM);
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         ActorRef storeActor = system.actorOf(Props.create(storeActor.class));
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = create(materializer, storeActor);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
-                ConnectHttp.toHost("localhost", 8080),
+                ConnectHttp.toHost(HOST, PORT),
                 materializer
         );
         System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
@@ -58,7 +66,7 @@ public class DefSystem {
                 .map(
                         (msg) -> {
                             Query first_param = msg.getUri().query();
-                            String URL = first_param.get("testUrl").get();
+                            String URL = first_param.get(STR_TESTURL).get();
                             Integer count = Integer.parseInt(first_param.get("count").get());
                             return new Pair<>(URL, count);
                         }).mapAsync(
